@@ -1,7 +1,11 @@
 from pyanaconda.ui.tui import TextUserInterface
 from initial_setup.product import product_title, is_final
 from .hubs import InitialSetupMainHub
+from pyanaconda.ui.tui.spokes import StandaloneSpoke
+import pyanaconda.ui.tui.spokes
+from pyanaconda.ui.common import collect, FirstbootSpokeMixIn
 import os
+import logging
 import gettext
 from di import inject, usesclassinject
 

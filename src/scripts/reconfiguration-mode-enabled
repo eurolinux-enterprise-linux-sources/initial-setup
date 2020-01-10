@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo "The /.unconfigured file has been detected, starting Initial Setup in reconfiguration mode." | systemd-cat -t initial-setup -p 6
-/usr/libexec/initial-setup/run-initial-setup

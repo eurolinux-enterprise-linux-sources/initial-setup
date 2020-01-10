@@ -2,18 +2,12 @@
 
 import gettext
 import codecs
-import logging
 
 from pyanaconda.ui.tui.spokes import NormalTUISpoke
 from pyanaconda.ui.tui.simpleline.widgets import TextWidget, CheckboxWidget
 from pyanaconda.ui.tui.simpleline.base import UIScreen
 from pyanaconda.ui.common import FirstbootOnlySpokeMixIn
 from initial_setup.product import get_license_file_name
-from initial_setup.common import LicensingCategory
-from pyanaconda.constants import FIRSTBOOT_ENVIRON
-from pykickstart.constants import FIRSTBOOT_RECONFIG
-
-log = logging.getLogger("initial-setup")
 
 _ = lambda x: gettext.ldgettext("initial-setup", x)
 N_ = lambda x: x
@@ -24,7 +18,7 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalTUISpoke):
     """The EULA spoke providing ways to read the license and agree/disagree with it."""
 
     title = _("License information")
-    category = LicensingCategory
+    category = "system"
 
     def __init__(self, *args, **kwargs):
         NormalTUISpoke.__init__(self, *args, **kwargs)
@@ -40,14 +34,12 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalTUISpoke):
         NormalTUISpoke.refresh(self, args)
 
         if self._have_eula:
-            log.debug("license found")
             # make the options aligned to the same column (the checkbox has the
             # '[ ]' prepended)
             self._window += [TextWidget("    1) %s" % _("Read the License Agreement")), ""]
             self._window += [CheckboxWidget(title="2) %s" % _("I accept the license agreement."),
                                             completed=self.data.eula.agreed), ""]
         else:
-            log.debug("license not found")
             self._window += [TextWidget(_("No license found. Please report this "
                                           "at http://bugzilla.redhat.com")), ""]
 
@@ -66,17 +58,7 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalTUISpoke):
         if not self._have_eula:
             return _("No license found")
 
-        return _("License accepted") if self.data.eula.agreed else _("License not accepted")
-
-    @classmethod
-    def should_run(cls, environment, data):
-        # the EULA spoke should only run in Initial Setup
-        if environment == FIRSTBOOT_ENVIRON:
-            # don't run if we are in reconfig mode and the EULA has already been accepted
-            if data and data.firstboot.firstboot == FIRSTBOOT_RECONFIG and data.eula.agreed:
-                log.debug("not running license spoke: reconfig mode & license already accepted")
-                return False
-            return True
+        return _("License agreed") if self.data.eula.agreed else _("License not agreed")
 
     def apply(self):
         # nothing needed here, the agreed field is changed in the input method
@@ -91,13 +73,11 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalTUISpoke):
 
         if keyid == 1:
             # show license
-            log.debug("showing the license")
             eula_screen = LicenseScreen(self._app)
             self.app.switch_screen_with_return(eula_screen)
             return None
         elif keyid == 2:
             # toggle EULA agreed checkbox by changing ksdata
-            log.debug("license accepted state changed to: %s", self.data.eula.agreed)
             self.data.eula.agreed = not self.data.eula.agreed
             return None
 
@@ -121,7 +101,6 @@ class LicenseScreen(UIScreen):
         # read the license file and make it one long string so that it can be
         # processed by the TextWidget to fit in the screen in a best possible
         # way
-        log.debug("reading the license file")
         buf = u""
         with codecs.open(self._license_file, "r", "utf-8", "ignore") as fobj:
             for line in fobj:

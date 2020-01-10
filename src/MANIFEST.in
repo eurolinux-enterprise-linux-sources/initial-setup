@@ -1,8 +1,8 @@
 include COPYING
-include README
 include Makefile
 recursive-include systemd *
 recursive-include scripts *
 recursive-include po *.po *.pot Makefile
-recursive-include initial_setup *.py *.glade
+recursive-include modules *.py *.glade *.txt
+recursive-include initial_setup *.py *.glade *.txt
 recursive-exclude modules *.pyc *.pyo

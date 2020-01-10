@@ -1,5 +1,4 @@
 """Module providing information about the installed product."""
-import logging
 
 from pyanaconda.localization import find_best_locale_match
 from pyanaconda.constants import DEFAULT_LANG
@@ -7,9 +6,7 @@ import os
 import glob
 
 RELEASE_STRING_FILE = "/etc/os-release"
-LICENSE_FILE_GLOB = "/usr/share/redhat-release*/EULA*"
-
-log = logging.getLogger("initial-setup")
+LICENSE_FILE_GLOB = "/usr/share/doc/redhat-release*/EULA*"
 
 def product_title():
     """
@@ -29,7 +26,7 @@ def product_title():
                 if key == "PRETTY_NAME":
                     return value.strip('"')
     except IOError:
-        log.exception("failed to check the release string file")
+        pass
 
     return ""
 

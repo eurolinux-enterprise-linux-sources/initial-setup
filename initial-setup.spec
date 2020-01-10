@@ -1,8 +1,9 @@
 Summary: Initial system configuration utility
 Name: initial-setup
-URL: http://fedoraproject.org/wiki/InitialSetup
-Version: 0.3.9.36
+URL: http://fedoraproject.org/wiki/FirstBoot
+Version: 0.3.9.5
 Release: 1%{?dist}
+BuildArch: noarch
 
 # This is a Red Hat maintained package which is specific to
 # our distribution.
@@ -11,9 +12,9 @@ Release: 1%{?dist}
 # or via direct git checkout:
 # git clone git://git.fedorahosted.org/initial-setup.git
 Source0: %{name}-%{version}.tar.gz
+Patch0: initial-setup-0.3.9.4-rhbz1028365.patch
 
-%define debug_package %{nil}
-%define anacondaver 21.48.22.75
+%define anacondaver 19.31.27
 
 License: GPLv2+
 Group: System Environment/Base
@@ -27,13 +28,15 @@ BuildRequires: gtk-doc
 BuildRequires: gobject-introspection-devel
 BuildRequires: glade-devel
 BuildRequires: pygobject3
+BuildRequires: anaconda >= %{anacondaver}
 BuildRequires: python-di
-
+Requires: gtk3
 Requires: python
-Requires: anaconda-tui >= %{anacondaver}
+Requires: anaconda >= %{anacondaver}
 Requires(post): systemd
 Requires(preun): systemd
 Requires(postun): systemd
+Requires: firstboot(windowmanager)
 Requires: libreport-python
 Requires: python-di
 Conflicts: firstboot < 19.2
@@ -42,19 +45,9 @@ Conflicts: firstboot < 19.2
 The initial-setup utility runs after installation.  It guides the user through
 a series of steps that allows for easier configuration of the machine.
 
-%package gui
-Summary: Graphical user interface for the initial-setup utility
-Requires: gtk3
-Requires: anaconda-gui >= %{anacondaver}
-Requires: %{name} = %{version}-%{release}
-Requires: firstboot(windowmanager)
-
-%description gui
-The initial-setup-gui package contains a graphical user interface for the
-initial-setup utility.
-
 %prep
 %setup -q
+%patch0 -p1
 
 # remove upstream egg-info
 rm -rf *.egg-info
@@ -64,6 +57,7 @@ rm -rf *.egg-info
 make po-files
 
 %check
+%{__python} setup.py nosetests
 
 %install
 %{__python} setup.py install --skip-build --root $RPM_BUILD_ROOT
@@ -71,244 +65,43 @@ make install-po-files
 %find_lang %{name}
 
 %post
-%systemd_post initial-setup-text.service
-%systemd_post initial-setup.service
-%systemd_post initial-setup-reconfiguration.service
+if [ $1 -ne 2 -a ! -f /etc/sysconfig/initial-setup ]; then
+  platform="$(arch)"
+  if [ "$platform" = "s390" -o "$platform" = "s390x" ]; then
+    echo "RUN_INITIAL_SETUP=YES" > /etc/sysconfig/initial-setup
+  else
+    %systemd_post initial-setup-graphical.service
+    %systemd_post initial-setup-text.service
+  fi
+fi
 
 %preun
+%systemd_preun initial-setup-graphical.service
 %systemd_preun initial-setup-text.service
-%systemd_preun initial-setup.service
-%systemd_preun initial-setup-reconfiguration.service
 
 %postun
-%systemd_postun initial-setup-text.service
-%systemd_postun initial-setup.service
-%systemd_postun initial-setup-reconfiguration.service
-
-%post gui
-%systemd_post initial-setup-graphical.service
-
-%preun gui
-%systemd_preun initial-setup-graphical.service
-
-%postun gui
-%systemd_postun initial-setup-graphical.service
+%systemd_postun_with_restart initial-setup-graphical.service
+%systemd_postun_with_restart initial-setup-text.service
 
 %files -f %{name}.lang
 %doc COPYING README
-%{python_sitelib}/initial_setup*
-%exclude %{python_sitelib}/initial_setup/gui
+%dir %{_datadir}/initial-setup/
+%dir %{_datadir}/initial-setup/modules/
+%{python_sitelib}/*
+%{_bindir}/initial-setup
+%{_bindir}/firstboot-windowmanager
+%{_datadir}/initial-setup/modules/*
+
+%{_unitdir}/initial-setup-graphical.service
 %{_unitdir}/initial-setup-text.service
-%{_unitdir}/initial-setup.service
-%{_unitdir}/initial-setup-reconfiguration.service
-%{_libexecdir}/%{name}/run-initial-setup
-%{_libexecdir}/%{name}/firstboot-windowmanager
-%{_libexecdir}/%{name}/initial-setup-text
-%{_libexecdir}/%{name}/text-service-is-deprecated
-%{_libexecdir}/%{name}/reconfiguration-mode-enabled
 
 %ifarch s390 s390x
 %{_sysconfdir}/profile.d/initial-setup.sh
 %{_sysconfdir}/profile.d/initial-setup.csh
 %endif
 
-%files gui
-%{python_sitelib}/initial_setup/gui/*
-%{_unitdir}/initial-setup-graphical.service
-%{_libexecdir}/%{name}/initial-setup-graphical
-%{_libexecdir}/%{name}/graphical-service-is-deprecated
-
 
 %changelog
-* Wed Sep 14 2016 Martin Kolman <mkolman@redhat.com> - 0.3.9.36-1
-- Reboot the system if EULA is not accepted (#1365539) (mkolman)
-  Resolves: rhbz#1365539
-
-* Wed Sep 07 2016 Martin Kolman <mkolman@redhat.com> - 0.3.9.35-1
-- Change how Initial Setup reconfig mode is started (#1342536) (mkolman)
-  Related: rhbz#1342536
-- Add systemd scriptlets for initial-setup-reconfigure.service (#1342536) (mkolman)
-  Related: rhbz#1342536
-
-* Tue Aug 23 2016 Martin Kolman <mkolman@redhat.com> - 0.3.9.34-1
-- Suppress logging to stdout when TUI is started by s390 startup scripts (mkolman)
-  Related: rhbz#1366776
-- Fix path to TUI executable in the s390 startup scripts (#1366776) (mkolman)
-  Resolves: rhbz#1366776
-- Canonicalize symlinks returned by readlink (mkolman)
-  Related: rhbz#1360343
-
-* Mon Aug 01 2016 Martin Kolman <mkolman@redhat.com> - 0.3.9.33-1
-- Don't run the GUI on text-only systems (#1360343) (mkolman)
-  Resolves:#1360343
-
-* Mon Jun 06 2016 Martin Kolman <mkolman@redhat.com> - 0.3.9.32-1
-- Fix reconfiguration service name (mkolman)
-  Related: rhbz#1257624
-- Fix installation path for a reconfiguration related script (mkolman)
-  Related: rhbz#1257624
-- Use the environs flag when setting the environment (mkolman)
-  Related: rhbz#1270354
-- Some typo fixes and logging improvements (mkolman)
-  Related: rhbz#1257624
-- Add a systemd service that enables Initial Setup if /.unconfigured exists (#1257624) (mkolman)
-  Resolves: rhbz#1257624
-- Initialize Thread Manager as early as possible (#1249598) (mkolman)
-  Related: rhbz#1249598
-- Adapt to addon execute() signature change (mkolman)
-  Related: rhbz#1288636
-- Suppress an error message about missing initial-setup-graphical.unit (#1249598) (mkolman)
-  Related: rhbz#1249598
-
-* Mon May 02 2016 Martin Kolman <mkolman@redhat.com> - 0.3.9.31-1
-- Makefile improvements (#1249598) (mkolman)
-  Related: rhbz#1249598
-- Make Initial Setup startup more robust (#1249598) (mkolman)
-  Resolves: rhbz#1249598
-- Move the s390 profile scripts to a subfolder (#1249598) (mkolman)
-  Realeted: rhbz#1249598
-- Improve log messages for kickstart parsing error (#1249598) (mkolman)
-  Related: rhbz#1249598
-- Make sure full screen is used & window header bar is hidden (#1290321) (mkolman)
-  Resolves: rhbz#1290321
-- Use blank title for the Initial Setup window (#1310179) (mkolman)
-  Resolves: rhbz#1310179
-
-* Tue Sep 22 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.30-1
-- Only root should be able to read the initial-setup-ks.cfg file (#1264336) (mkolman)
-  Resolves: rhbz#1264336
-
-* Tue Sep 01 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.29-1
-- Move gui scriptlets to the gui subpackage (#1181209) (mkolman)
-  Resolves: rhbz#1181209
-
-* Thu Aug 27 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.28-1
-- Run the TUI service before hvc0.service (#1209731) (mmatsuya)
-  Resolves: rhbz#1209731
-- Don't create /etc/sysconfig/initial-setup on s390 (#1181209) (mkolman)
-  Related: rhbz#1181209
-- Setup the locale before starting the UI (dshea)
-  Resolves: rhbz#1198642
-
-* Wed Jul 22 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.27-1
-- Switch to Zanata for translations (#1229747) (mkolman)
-  Related: rhbz#1229747
-
-* Mon Jul 13 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.26-2
-- Don't try to run nonexistent tests (#1229747) (mkolman)
-  Related: rhbz#1229747
-
-* Thu Jul 9 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.26-1
-- Use systemd service status for run detection on the S390 console (#1181209) (mkolman)
-  Resolves: rhbz#1181209
-- Bump the required Anaconda version (#1229747) (mkolman)
-  Related: rhbz#1229747
-
-* Fri Jul 3 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.25-2
-- Don't show the EULA spoke in reconfig mode if license is already accepted (#1110439) (mkolman)
-  Related: rhbz#1110439
-- Read the kickstart from previous IS run, if available (#1110439) (mkolman)
-  Related: rhbz#1110439
-- Add support for externally triggered reconfig mode (#1110439) (mkolman)
-  Resolves: rhbz#1110439
-
-* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.24-1
-- Make Initial Setup compatible with rebased Anaconda (#1229747) (mkolman)
-  Resolves: rhbz#1229747
-- Log the reason if GUI import fails (#1229747) (mkolman)
-  Related: rhbz#1229747
-
-* Tue Jan 20 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.23-1
-- Redirect the EULA spoke help button to the Initial Setup hub help file (#1072033) (mkolman)
-  Related: rhbz#1072033
-
-* Fri Jan 9 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.22-1
-- Fixes for profile.d scripts (#1180576) (jstodola)
-  Resolves: rhbz#1180576
-
-* Fri Nov 21 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.21-1
-- Move the firstboot(windowmanager) dependency to the GUI package (#999464) (mkolman)
-  Related: rhbz#999464
-
-* Mon Nov 3 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.20-1
-- Explicitly require the main package in the GUI sub package (#1078917) (mkolman)
-  Related: #1078917
-
-* Thu Oct 23 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.19-1
-- Point to the new Initial Setup wiki page (#1154656) (mkolman)
-  Resolves: rhbz#1154656
-- Add syslog logging support (#1153768) (mkolman)
-  resolves: rhbz#1153768
-
-* Fri Oct 3 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.18-1
-- Fix Initial Setup to correctly support the Anaconda built-in Help (#1072033) (mkolman)
-  Related: rhbz#1072033
-
-* Thu Oct 2 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.17-1
-- Fix register_event_cb function signature (#1072033) (mkolman)
-  Related: rhbz#1072033
-
-* Mon Sep 29 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.16-1
-- Populate README (#1110178) (mkolman)
-  Resolves: rhbz#1110178
-
-* Tue Sep 16 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.15-1
-- Remove the modules folder (#999464) (mkolman)
-  Related: rhbz#999464
-
-* Thu Sep 11 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.14-1
-- Bump Anaconda version requirement for the GUI split (mkolman)
-  Related: rhbz#999464
-- Split GUI code into a separate package (#999464) (vpodzime)
-  Resolves: rhbz#999464
-
-* Mon Sep 8 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.13-1
-- Use the Licensing category for the EULA (#1039677) (mkolman)
-  Resolves: rhbz#1039677
-
-* Tue Apr 1 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.12-1
-- Set initial-setup translation domain for the hub and EULA spoke (mkolman)
-  Resolves: rhbz#1040240
-
-* Tue Mar 18 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.11-1
-- Rebuild with new translations
-  Resolves: rhbz#1040240
-
-* Mon Feb 24 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.10-1
-- Rebuild with new translations
-  Resolves: rhbz#1040240
-
-* Tue Feb 11 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.9-1
-- Try to quit plymouth before running our X server instance
-  Resolves: rhbz#1058329
-- Get rid of the empty debuginfo package
-  Related: rhbz#1057590
-
-* Fri Jan 25 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.8-1
-- Ignore the SIGINT
-  Resolves: rhbz#1035590
-
-* Fri Jan 24 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.7-2
-- Make initial-setup an arch specific package
-  Resolves: rhbz#1057590
-
-* Thu Jan 23 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.7-1
-- Include new translations
-  Resolves: rhbz#1030361
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.3.9.6-2
-- Mass rebuild 2013-12-27
-
-* Wed Dec 18 2013 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.6-1
-- Ignore .po and generated files in po/ (dshea)
-  Related: rhbz#1040240
-- Mark title strings in the initial-setup hub as translatable (dshea)
-  Resolves: rhbz#1040240
-- Reword the EULA spokes' status messages (vpodzime)
-  Resolves: rhbz#1039672
-- Cancel formatting of EULA when putting it into the text buffer (vpodzime)
-  Resolves: rhbz#1039675
-
 * Mon Nov 18 2013 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.5-1
 - Override distribution text in spokes (vpodzime)
   Resolves: rhbz#1028370

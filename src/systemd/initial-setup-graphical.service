@@ -1,25 +1,17 @@
 [Unit]
-Description=Initial Setup configuration program graphical interface
+Description=Initial Setup configuration program
 After=livesys.service plymouth-quit-wait.service
-After=systemd-vconsole-setup.service
-Before=display-manager.service getty@tty1.service getty@ttyUSB0.service
-Before=serial-getty@ttyS0.service serial-getty@ttyO0.service serial-getty@ttyO2.service
-Before=serial-getty@ttyAMA0.service serial-getty@ttymxc0.service serial-getty@ttymxc3.service serial-getty@hvc0.service
-Before=initial-setup.service
-Conflicts=plymouth-quit-wait.service
+Before=display-manager.service getty@tty1.service
+Conflicts=plymouth-quit-wait.service initial-setup-text.service
 ConditionKernelCommandLine=!rd.live.image
-Requires=initial-setup.service
 
 [Service]
 Type=oneshot
-TimeoutSec=0
-StandardInput=tty
-StandardOutput=tty
-RemainAfterExit=yes
-ExecStart=/usr/libexec/initial-setup/graphical-service-is-deprecated
+ExecStartPre=
+ExecStart=/bin/xinit /bin/firstboot-windowmanager /bin/initial-setup -- /bin/Xorg :9 -ac -nolisten tcp
 TimeoutSec=0
 RemainAfterExit=no
+SysVStartPriority=99
 
 [Install]
 WantedBy=graphical.target
-WantedBy=multi-user.target

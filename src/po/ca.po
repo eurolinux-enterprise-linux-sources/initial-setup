@@ -1,111 +1,91 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Robert Antoni Buj i Gelonch, 2014
-# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015. #zanata
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 12:35+0200\n"
-"PO-Revision-Date: 2016-05-04 03:32-0400\n"
-"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/projects/p/initial-setup/language/ca/)\n"
+"POT-Creation-Date: 2013-11-18 14:52+0100\n"
+"PO-Revision-Date: 2013-11-01 16:49+0000\n"
+"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/fedora/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.5\n"
 
-#: ../initial_setup/common.py:62
-msgid "LICENSING"
-msgstr "LLICÈNCIES"
-
-#: ../initial_setup/tui/tui.py:12 ../initial_setup/gui/gui.py:14
+#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
 msgstr ""
-"Esteu segur que voleu sortir del procés de configuració?\n"
-"Si ho feu, el sistema podria acabar sent inestable. Llevat que s'accepti l'acord de llicència, el sistema es reiniciarà."
 
-#: ../initial_setup/tui/spokes/eula.py:26
+#: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
-msgstr "Informació de la llicència"
+msgstr ""
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
-#: ../initial_setup/tui/spokes/eula.py:46
+#: ../initial_setup/tui/spokes/eula.py:39
 msgid "Read the License Agreement"
-msgstr "Llegiu l'acord de llicència"
+msgstr ""
 
-#: ../initial_setup/tui/spokes/eula.py:47
+#: ../initial_setup/tui/spokes/eula.py:40
 msgid "I accept the license agreement."
-msgstr "Accepto l'acord de llicència."
+msgstr ""
 
-#: ../initial_setup/tui/spokes/eula.py:51
-#: ../initial_setup/gui/spokes/eula.py:53
+#: ../initial_setup/tui/spokes/eula.py:43
+#: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
 msgstr ""
-"No s'ha trobat cap llicència. Informeu-ho a http://bugzilla.redhat.com"
 
-#: ../initial_setup/tui/spokes/eula.py:67
-#: ../initial_setup/gui/spokes/eula.py:94
+#: ../initial_setup/tui/spokes/eula.py:59
+#: ../initial_setup/gui/spokes/eula.py:65
 msgid "No license found"
-msgstr "No s'ha trobat cap llicència"
+msgstr ""
 
-#: ../initial_setup/tui/spokes/eula.py:69
-#: ../initial_setup/gui/spokes/eula.py:96
-msgid "License accepted"
-msgstr "S'ha acceptat la llicència"
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:67
+msgid "License agreed"
+msgstr ""
 
-#: ../initial_setup/tui/spokes/eula.py:69
-#: ../initial_setup/gui/spokes/eula.py:96
-msgid "License not accepted"
-msgstr "No s'ha acceptat la llicència"
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:67
+msgid "License not agreed"
+msgstr ""
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:18
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
 #, python-format
 msgid "Initial setup of %(product)s"
-msgstr "Configuració inicial de %(product)s"
+msgstr ""
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:20
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
 msgid "Initial setup"
-msgstr "Configuració inicial"
+msgstr ""
 
-#: ../initial_setup/gui/spokes/eula.py:34
+#: ../initial_setup/gui/spokes/eula.py:26
 msgid "_LICENSE INFORMATION"
-msgstr "INFORMACIÓ DE LA _LLICÈNCIA"
+msgstr ""
 
 #: tmp/eula.glade.h:1
 msgid "LICENSE INFORMATION"
-msgstr "INFORMACIÓ DE LA LLICÈNCIA"
+msgstr ""
 
 #: tmp/eula.glade.h:2
 msgid "License Agreement:"
-msgstr "Acord de llicència:"
+msgstr ""
 
 #: tmp/eula.glade.h:3
 msgid "I _accept the license agreement."
-msgstr "_Accepto l'acord de llicència."
+msgstr ""
 
 #: tmp/initial_setup.glade.h:1
-msgid "DISTRIBUTION SETUP"
-msgstr "CONFIGURACIÓ DISTRIBUCIÓ"
+msgid "_QUIT"
+msgstr ""
 
 #: tmp/initial_setup.glade.h:2
-msgid "INITIAL SETUP"
-msgstr "CONFIGURACIÓ INICIAL"
-
-#: tmp/initial_setup.glade.h:3
-msgid "_QUIT"
-msgstr "_SURT"
-
-#: tmp/initial_setup.glade.h:4
 msgid "_FINISH CONFIGURATION"
-msgstr "_FINALITZA LA CONFIGURACIÓ"
+msgstr ""
