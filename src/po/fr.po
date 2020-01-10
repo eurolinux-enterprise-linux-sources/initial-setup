@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# dominique bribanick <chepioq@gmail.com>, 2013
+# Gé Baylard <geodebay@gmail.com>, 2013
+# Jérôme Fenal <jfenal@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: initial-setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 16:53+0100\n"
+"PO-Revision-Date: 2013-12-26 17:59+0000\n"
+"Last-Translator: Gé Baylard <geodebay@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/initial-setup/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+msgid ""
+"Are you sure you want to quit the configuration process?\n"
+"You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
+msgstr "Êtes-vous sur de vouloir quitter le processus de configuration ?\nSi vous le faites  vous pourriez vous retrouver avec un système inutilisable. À moins que le contrat de licence soit accepté, le système sera redémarré."
+
+#: ../initial_setup/tui/spokes/eula.py:20
+msgid "License information"
+msgstr "Informations de licence"
+
+#. make the options aligned to the same column (the checkbox has the
+#. '[ ]' prepended)
+#: ../initial_setup/tui/spokes/eula.py:39
+msgid "Read the License Agreement"
+msgstr "Lire le contrat de licence"
+
+#: ../initial_setup/tui/spokes/eula.py:40
+msgid "I accept the license agreement."
+msgstr "J'accepte le contrat de licence."
+
+#: ../initial_setup/tui/spokes/eula.py:43
+#: ../initial_setup/gui/spokes/eula.py:41
+msgid "No license found. Please report this at http://bugzilla.redhat.com"
+msgstr "Aucune licence trouvée. Merci de rapporter ce problème sur http://bugzilla.redhat.com"
+
+#: ../initial_setup/tui/spokes/eula.py:59
+#: ../initial_setup/gui/spokes/eula.py:81
+msgid "No license found"
+msgstr "Licence introuvable"
+
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License accepted"
+msgstr "Licence acceptée"
+
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License not accepted"
+msgstr "Licence refusée"
+
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#, python-format
+msgid "Initial setup of %(product)s"
+msgstr "Configuration initiale de %(product)s"
+
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+msgid "Initial setup"
+msgstr "Configuration initiale"
+
+#: ../initial_setup/gui/spokes/eula.py:26
+msgid "_LICENSE INFORMATION"
+msgstr "INFORMATIONS SUR LA LICENCE"
+
+#: tmp/eula.glade.h:1
+msgid "LICENSE INFORMATION"
+msgstr "INFORMATIONS SUR LA LICENCE"
+
+#: tmp/eula.glade.h:2
+msgid "License Agreement:"
+msgstr "Contrat de licence"
+
+#: tmp/eula.glade.h:3
+msgid "I _accept the license agreement."
+msgstr "J'_accepte le contrat de licence."
+
+#: tmp/initial_setup.glade.h:1
+msgid "DISTRIBUTION SETUP"
+msgstr "CONFIGURATION DE LA DISTRIBUTION"
+
+#: tmp/initial_setup.glade.h:2
+msgid "INITIAL SETUP"
+msgstr "CONFIGURATION INITIALE"
+
+#: tmp/initial_setup.glade.h:3
+msgid "_QUIT"
+msgstr "_QUITTER"
+
+#: tmp/initial_setup.glade.h:4
+msgid "_FINISH CONFIGURATION"
+msgstr "_FINALISER LA CONFIGURATION"

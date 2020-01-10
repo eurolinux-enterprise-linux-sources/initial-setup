@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Ankit Patel <ankit644@yahoo.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: initial-setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 16:53+0100\n"
+"PO-Revision-Date: 2014-01-15 09:01+0000\n"
+"Last-Translator: Ankit Patel <ankit644@yahoo.com>\n"
+"Language-Team: Gujarati (http://www.transifex.com/projects/p/initial-setup/language/gu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: gu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+msgid ""
+"Are you sure you want to quit the configuration process?\n"
+"You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
+msgstr "શું તમે ખરેખર રૂપરેખાંકન પ્રક્રિયામાંથી બહાર નીકળવા માંગો છો?\nતમારો બિનઉપયોગી સિસ્ટમ સાથે અંત આવી શકે છે જો તમે કરો તો. નહિં તો લાઇસન્સ કરારને સ્વીકારેલ છે, સિસ્ટમ રિબુટ થશે."
+
+#: ../initial_setup/tui/spokes/eula.py:20
+msgid "License information"
+msgstr "લાઇસન્સ જાણકારી"
+
+#. make the options aligned to the same column (the checkbox has the
+#. '[ ]' prepended)
+#: ../initial_setup/tui/spokes/eula.py:39
+msgid "Read the License Agreement"
+msgstr "લાઇસન્સ કરાર વાંચો"
+
+#: ../initial_setup/tui/spokes/eula.py:40
+msgid "I accept the license agreement."
+msgstr "હું લાઇસન્સ કરારને સ્વીકારે છે."
+
+#: ../initial_setup/tui/spokes/eula.py:43
+#: ../initial_setup/gui/spokes/eula.py:41
+msgid "No license found. Please report this at http://bugzilla.redhat.com"
+msgstr "લાઇસન્સ મળ્યુ નથી. મહેરબાની કરીને http://bugzilla.redhat.com પર આનો અહેવાલ કરો"
+
+#: ../initial_setup/tui/spokes/eula.py:59
+#: ../initial_setup/gui/spokes/eula.py:81
+msgid "No license found"
+msgstr "લાઇસન્સ મળ્યુ નથી"
+
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License accepted"
+msgstr "લાયસન્સ સ્વીકાર્યુ"
+
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License not accepted"
+msgstr "લાયસન્સ સ્વીકાર્યુ નથી"
+
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#, python-format
+msgid "Initial setup of %(product)s"
+msgstr "%(product)s નું પ્રારંભિક સુયોજન"
+
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+msgid "Initial setup"
+msgstr "પ્રારંભિક સુયોજન"
+
+#: ../initial_setup/gui/spokes/eula.py:26
+msgid "_LICENSE INFORMATION"
+msgstr "લાઇસન્સ જાણકારી (_L)"
+
+#: tmp/eula.glade.h:1
+msgid "LICENSE INFORMATION"
+msgstr "લાઇસન્સ જાણકારી"
+
+#: tmp/eula.glade.h:2
+msgid "License Agreement:"
+msgstr "લાઇસન્સ કરાર:"
+
+#: tmp/eula.glade.h:3
+msgid "I _accept the license agreement."
+msgstr "હું લાઇસન્સ કરારને સ્વીકારુ છુ (_a)."
+
+#: tmp/initial_setup.glade.h:1
+msgid "DISTRIBUTION SETUP"
+msgstr "વિતરણ સુયોજન"
+
+#: tmp/initial_setup.glade.h:2
+msgid "INITIAL SETUP"
+msgstr "પ્રારંભિક સુયોજન"
+
+#: tmp/initial_setup.glade.h:3
+msgid "_QUIT"
+msgstr "બહાર નીકળો (_Q)"
+
+#: tmp/initial_setup.glade.h:4
+msgid "_FINISH CONFIGURATION"
+msgstr "રૂપરેખાંકન સમાપ્ત કરો (_F)"

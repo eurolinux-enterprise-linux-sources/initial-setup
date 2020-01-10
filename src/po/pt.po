@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Manuela Silva <manuela.silva@sky.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: initial-setup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 16:53+0100\n"
+"PO-Revision-Date: 2014-04-30 13:03+0000\n"
+"Last-Translator: Manuela Silva <manuela.silva@sky.com>\n"
+"Language-Team: Portuguese (http://www.transifex.com/projects/p/initial-setup/language/pt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+msgid ""
+"Are you sure you want to quit the configuration process?\n"
+"You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
+msgstr "Tem a certeza que deseja sair do processo da configuração?\nSe o fizer pode acabar com um sistema inutilizável. A menos que aceite o Acordo da Licença, o sistema será reiniciado."
+
+#: ../initial_setup/tui/spokes/eula.py:20
+msgid "License information"
+msgstr "Informação da Licença"
+
+#. make the options aligned to the same column (the checkbox has the
+#. '[ ]' prepended)
+#: ../initial_setup/tui/spokes/eula.py:39
+msgid "Read the License Agreement"
+msgstr "Ler o Acordo da Licença"
+
+#: ../initial_setup/tui/spokes/eula.py:40
+msgid "I accept the license agreement."
+msgstr "Eu aceito o acordo da licença."
+
+#: ../initial_setup/tui/spokes/eula.py:43
+#: ../initial_setup/gui/spokes/eula.py:41
+msgid "No license found. Please report this at http://bugzilla.redhat.com"
+msgstr "Não foi encontrada nenhuma licença. Por favor, comunique isto em http://bugzilla.redhat.com"
+
+#: ../initial_setup/tui/spokes/eula.py:59
+#: ../initial_setup/gui/spokes/eula.py:81
+msgid "No license found"
+msgstr "Não foram encontradas licenças"
+
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License accepted"
+msgstr "Licença aceite"
+
+#: ../initial_setup/tui/spokes/eula.py:61
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License not accepted"
+msgstr "Licença não aceite"
+
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#, python-format
+msgid "Initial setup of %(product)s"
+msgstr "Configuração iniciial do %(product)s"
+
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+msgid "Initial setup"
+msgstr "Configuração inicial"
+
+#: ../initial_setup/gui/spokes/eula.py:26
+msgid "_LICENSE INFORMATION"
+msgstr "INFORMAÇÃO da _LICENÇA"
+
+#: tmp/eula.glade.h:1
+msgid "LICENSE INFORMATION"
+msgstr "INFORMAÇÃO da LICENÇA"
+
+#: tmp/eula.glade.h:2
+msgid "License Agreement:"
+msgstr "Acordo da Licença:"
+
+#: tmp/eula.glade.h:3
+msgid "I _accept the license agreement."
+msgstr "Eu _aceito o acordo da licença."
+
+#: tmp/initial_setup.glade.h:1
+msgid "DISTRIBUTION SETUP"
+msgstr "CONFIGURAÇÃO DISTRIBUIÇÃO"
+
+#: tmp/initial_setup.glade.h:2
+msgid "INITIAL SETUP"
+msgstr "CONFIGURAÇÃO INICIAL"
+
+#: tmp/initial_setup.glade.h:3
+msgid "_QUIT"
+msgstr "_SAIR"
+
+#: tmp/initial_setup.glade.h:4
+msgid "_FINISH CONFIGURATION"
+msgstr "_TERMINAR CONFIGURAÇÃO"
