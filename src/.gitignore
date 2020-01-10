@@ -1,0 +1,8 @@
+.ropeproject
+*.pyc
+*.pyo
+~.~
+.#*
+po/*.po
+po/*.gmo
+po/tmp

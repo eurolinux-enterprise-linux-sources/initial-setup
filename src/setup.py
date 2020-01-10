@@ -32,16 +32,21 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-data_files = [('/usr/lib/systemd/system', glob('systemd/*.service'))]
+data_files = [('/usr/lib/systemd/system', glob('systemd/*.service')),
+              ('/usr/libexec/initial-setup/',
+              ["scripts/run-initial-setup", "scripts/firstboot-windowmanager",
+               "scripts/initial-setup-text", "scripts/initial-setup-graphical",
+               "scripts/graphical-service-is-deprecated", "scripts/text-service-is-deprecated",
+               "scripts/reconfiguration-mode-enabled"])]
 
 # add the firstboot start script for s390 architectures
 if os.uname()[4].startswith('s390'):
-    data_files.append(('/etc/profile.d', ['scripts/initial-setup.sh']))
-    data_files.append(('/etc/profile.d', ['scripts/initial-setup.csh']))
+    data_files.append(('/etc/profile.d', ['scripts/s390/initial-setup.sh']))
+    data_files.append(('/etc/profile.d', ['scripts/s390/initial-setup.csh']))
 
 setup(
     name = "initial-setup",
-    version = "0.3.9.30",
+    version = "0.3.9.36",
     author = "Martin Sivak",
     author_email = "msivak@redhat.com",
     description='Post-installation configuration utility',
@@ -52,7 +57,6 @@ setup(
     package_data = {
         "": ["*.glade"]
     },
-    scripts = ["initial-setup", "firstboot-windowmanager"],
     data_files = data_files,
     setup_requires= ['nose>=1.0'],
     test_suite = "initial_setup",

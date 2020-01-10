@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # shanky <prasad.mvs@gmail.com>, 2014
 # Shankar Prasad <svenkate AT redhat Dot com>, 2014
@@ -11,18 +11,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-09-27 03:19-0400\n"
-"Last-Translator: shanky <prasad.mvs@gmail.com>\n"
+"POT-Creation-Date: 2016-09-14 12:35+0200\n"
+"PO-Revision-Date: 2015-07-20 09:34-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/initial-setup/language/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kn\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.7.1\n"
+"X-Generator: Zanata 3.9.5\n"
 
-#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+#: ../initial_setup/common.py:62
+msgid "LICENSING"
+msgstr ""
+
+#: ../initial_setup/tui/tui.py:12 ../initial_setup/gui/gui.py:14
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
@@ -30,52 +34,52 @@ msgstr ""
 "ನೀವು ಸಂರಚನಾ ಪ್ರಕ್ರಿಯೆಯಿಂದ ನಿರ್ಗಮಿಸಲು ಖಚಿತವೆ?\n"
 "ನೀವು ಹಾಗೆ ಮಾಡಿದಲ್ಲಿ, ವ್ಯವಸ್ಥೆಯನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಾಗದೆ ಇರುವ ಸಾಧ್ಯತೆ ಇದೆ. ಪರವಾನಗಿ ಒಪ್ಪಂದವನ್ನು ಒಪ್ಪಿಕೊಳ್ಳದಿದ್ದರೆ ವ್ಯವಸ್ಥೆಯನ್ನು ಮರಳಿ ಬೂಟ್‌ ಮಾಡಲಾಗುತ್ತದೆ."
 
-#: ../initial_setup/tui/spokes/eula.py:20
+#: ../initial_setup/tui/spokes/eula.py:26
 msgid "License information"
 msgstr "ಪರವಾನಗಿ ಮಾಹಿತಿ"
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
-#: ../initial_setup/tui/spokes/eula.py:39
+#: ../initial_setup/tui/spokes/eula.py:46
 msgid "Read the License Agreement"
 msgstr "ಪರವಾನಗಿ ಒಪ್ಪಂದವನ್ನು ಓದು"
 
-#: ../initial_setup/tui/spokes/eula.py:40
+#: ../initial_setup/tui/spokes/eula.py:47
 msgid "I accept the license agreement."
 msgstr "ನಾನು ಪರವಾನಗಿ ಒಪ್ಪಂದವನ್ನು ಒಪ್ಪಿಕೊಳ್ಳುತ್ತೇನೆ."
 
-#: ../initial_setup/tui/spokes/eula.py:43
-#: ../initial_setup/gui/spokes/eula.py:41
+#: ../initial_setup/tui/spokes/eula.py:51
+#: ../initial_setup/gui/spokes/eula.py:53
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
 msgstr ""
 "ಯಾವುದೆ ಪರವಾನಗಿ ಕಂಡುಬಂದಿಲ್ಲ. http://bugzilla.redhat.com ನಲ್ಲಿ ಇದನ್ನು ವರದಿ "
 "ಮಾಡಿ"
 
-#: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:81
+#: ../initial_setup/tui/spokes/eula.py:67
+#: ../initial_setup/gui/spokes/eula.py:94
 msgid "No license found"
 msgstr "ಯಾವುದೆ ಪರವಾನಗಿ ಕಂಡುಬಂದಿಲ್ಲ"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License accepted"
 msgstr "ಪರವಾನಗಿ ಒಪ್ಪಿಕೊಳ್ಳಲಾಗಿದೆ"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License not accepted"
 msgstr "ಪರವಾನಗಿ ಒಪ್ಪಿಕೊಂಡಿಲ್ಲ"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:18
 #, python-format
 msgid "Initial setup of %(product)s"
 msgstr "%(product)s ನ ಆರಂಭಿಕ ಏರ್ಪಾಡು"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:20
 msgid "Initial setup"
 msgstr "ಆರಂಭಿಕ ಏರ್ಪಾಡು"
 
-#: ../initial_setup/gui/spokes/eula.py:26
+#: ../initial_setup/gui/spokes/eula.py:34
 msgid "_LICENSE INFORMATION"
 msgstr "ಪರವಾನಗಿ ಮಾಹಿತಿ (_L)"
 

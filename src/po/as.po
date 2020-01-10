@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Nilamdyuti Goswami <ngoswami@redhat.com>, 2013-2014
 # Martin Kolman <mkolman@redhat.com>, 2015. #zanata
@@ -9,18 +9,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-03 09:18-0500\n"
-"Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
+"POT-Creation-Date: 2016-09-14 12:35+0200\n"
+"PO-Revision-Date: 2015-07-20 09:34-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Assamese (http://www.transifex.com/projects/p/initial-setup/language/as/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: as\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.7.1\n"
+"X-Generator: Zanata 3.9.5\n"
 
-#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+#: ../initial_setup/common.py:62
+msgid "LICENSING"
+msgstr ""
+
+#: ../initial_setup/tui/tui.py:12 ../initial_setup/gui/gui.py:14
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
@@ -29,52 +33,52 @@ msgstr ""
 "ইয়াৰ ফলস্বৰূপ আপোনাৰ চিস্টেম ব্যৱহাৰৰ অযোগ্য হৈ যাব পাৰে। অনুজ্ঞা চুক্তি\n"
 "গ্ৰহণ নকৰিলে, চিস্টেম পুনাৰম্ভ কৰা হব।"
 
-#: ../initial_setup/tui/spokes/eula.py:20
+#: ../initial_setup/tui/spokes/eula.py:26
 msgid "License information"
 msgstr "অনুজ্ঞা তথ্য"
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
-#: ../initial_setup/tui/spokes/eula.py:39
+#: ../initial_setup/tui/spokes/eula.py:46
 msgid "Read the License Agreement"
 msgstr "অনুজ্ঞা চুক্তি পঢ়ক"
 
-#: ../initial_setup/tui/spokes/eula.py:40
+#: ../initial_setup/tui/spokes/eula.py:47
 msgid "I accept the license agreement."
 msgstr "মই অনুজ্ঞা চুক্তি গ্ৰহণ কৰিছো।"
 
-#: ../initial_setup/tui/spokes/eula.py:43
-#: ../initial_setup/gui/spokes/eula.py:41
+#: ../initial_setup/tui/spokes/eula.py:51
+#: ../initial_setup/gui/spokes/eula.py:53
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
 msgstr ""
 "কোনো অনুজ্ঞা পোৱা নগল। অনুগ্ৰহ কৰি ইয়াক http://bugzilla.redhat.com ত সংবাদন "
 "কৰক"
 
-#: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:81
+#: ../initial_setup/tui/spokes/eula.py:67
+#: ../initial_setup/gui/spokes/eula.py:94
 msgid "No license found"
 msgstr "কোনো অনুজ্ঞা পোৱা নগল"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License accepted"
 msgstr "অনুজ্ঞা গ্ৰহণ কৰা হৈছে"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License not accepted"
 msgstr "অনুজ্ঞা গ্ৰহণ কৰা হোৱা নাই"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:18
 #, python-format
 msgid "Initial setup of %(product)s"
 msgstr "%(product)s ৰ আৰম্ভণি সংস্থাপন"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:20
 msgid "Initial setup"
 msgstr "আৰম্ভণি সংস্থাপন"
 
-#: ../initial_setup/gui/spokes/eula.py:26
+#: ../initial_setup/gui/spokes/eula.py:34
 msgid "_LICENSE INFORMATION"
 msgstr "অনুজ্ঞা তথ্য (_L)"
 

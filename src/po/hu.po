@@ -1,89 +1,96 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Zoltan Hoppár <zoltanh721@fedoraproject.org>, 2013-2014
-# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
+# Meskó Balázs <meskobalazs@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-04 06:32-0500\n"
-"Last-Translator: Zoltan Hoppár <zoltanh721@fedoraproject.org>\n"
+"POT-Creation-Date: 2016-09-14 12:35+0200\n"
+"PO-Revision-Date: 2016-03-31 04:00-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/initial-setup/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.7.1\n"
+"X-Generator: Zanata 3.9.5\n"
 
-#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+#: ../initial_setup/common.py:62
+msgid "LICENSING"
+msgstr ""
+
+#: ../initial_setup/tui/tui.py:12 ../initial_setup/gui/gui.py:14
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
 msgstr ""
+"Biztos benne, hogy kilép a beállítási folyamatból?\n"
+"Előfordulhat, hogy így egy használhatatlan rendszerrel találja magát szemben. Hacsak a licencmegállapodás nincs elfogadva, akkor a rendszer újraindításra kerül."
 
-#: ../initial_setup/tui/spokes/eula.py:20
+#: ../initial_setup/tui/spokes/eula.py:26
 msgid "License information"
-msgstr ""
+msgstr "Licencinformációk"
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
-#: ../initial_setup/tui/spokes/eula.py:39
+#: ../initial_setup/tui/spokes/eula.py:46
 msgid "Read the License Agreement"
-msgstr ""
+msgstr "Licencmegállapodás elolvasása"
 
-#: ../initial_setup/tui/spokes/eula.py:40
+#: ../initial_setup/tui/spokes/eula.py:47
 msgid "I accept the license agreement."
-msgstr ""
+msgstr "Elfogadom a licencmegállapodást."
 
-#: ../initial_setup/tui/spokes/eula.py:43
-#: ../initial_setup/gui/spokes/eula.py:41
+#: ../initial_setup/tui/spokes/eula.py:51
+#: ../initial_setup/gui/spokes/eula.py:53
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
 msgstr ""
+"Nem található licenc. Kérjük jelentse ezt itt: http://bugzilla.redhat.com"
 
-#: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:81
+#: ../initial_setup/tui/spokes/eula.py:67
+#: ../initial_setup/gui/spokes/eula.py:94
 msgid "No license found"
-msgstr ""
+msgstr "Nem található licenc"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License accepted"
-msgstr ""
+msgstr "Licenc elfogadva"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License not accepted"
-msgstr ""
+msgstr "Licenc nincs elfogadva"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:18
 #, python-format
 msgid "Initial setup of %(product)s"
-msgstr "Kezdeti beállítások: %(product)s számára"
+msgstr "Kezdeti beállítások ehhez: %(product)s"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:20
 msgid "Initial setup"
 msgstr "Kezdeti beállítások"
 
-#: ../initial_setup/gui/spokes/eula.py:26
+#: ../initial_setup/gui/spokes/eula.py:34
 msgid "_LICENSE INFORMATION"
-msgstr ""
+msgstr "_LICENCINFORMÁCIÓK"
 
 #: tmp/eula.glade.h:1
 msgid "LICENSE INFORMATION"
-msgstr ""
+msgstr "LICENC INFORMÁCIÓK"
 
 #: tmp/eula.glade.h:2
 msgid "License Agreement:"
-msgstr ""
+msgstr "Licencmegállapodás:"
 
 #: tmp/eula.glade.h:3
 msgid "I _accept the license agreement."
-msgstr ""
+msgstr "_Elfogadom a licencmegállapodást."
 
 #: tmp/initial_setup.glade.h:1
 msgid "DISTRIBUTION SETUP"

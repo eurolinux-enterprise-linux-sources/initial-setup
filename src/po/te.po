@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Krishnababu Krothapalli <kkrothap@redhat.com>, 2013
 # Krishnababu Krothapalli <krisnababu@gmail.com>, 2014
@@ -10,18 +10,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-30 03:51-0500\n"
-"Last-Translator: Krishnababu Krothapalli <krisnababu@gmail.com>\n"
+"POT-Creation-Date: 2016-09-14 12:35+0200\n"
+"PO-Revision-Date: 2015-07-20 09:34-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Telugu (http://www.transifex.com/projects/p/initial-setup/language/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.7.1\n"
+"X-Generator: Zanata 3.9.5\n"
 
-#: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
+#: ../initial_setup/common.py:62
+msgid "LICENSING"
+msgstr ""
+
+#: ../initial_setup/tui/tui.py:12 ../initial_setup/gui/gui.py:14
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
@@ -29,52 +33,52 @@ msgstr ""
 "మీరు ఆకృతీకరణ కార్యక్రమాన్ని నిశ్చయంగా విడవాలని అనుకొంటున్నారా?\n"
 "అలా చేస్తే మీ వ్యవస్థ అస్థిరమైనదిగా కావచ్చు. లైసెన్సు ఒప్పందపత్రం ఆమోదించితే తప్పించి, వ్యవస్థ పునఃప్రారంభించబడును."
 
-#: ../initial_setup/tui/spokes/eula.py:20
+#: ../initial_setup/tui/spokes/eula.py:26
 msgid "License information"
 msgstr "లైసెన్స్ సమాచారం"
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
-#: ../initial_setup/tui/spokes/eula.py:39
+#: ../initial_setup/tui/spokes/eula.py:46
 msgid "Read the License Agreement"
 msgstr "లైసెన్స్ ఒప్పందపత్రం చదువుము"
 
-#: ../initial_setup/tui/spokes/eula.py:40
+#: ../initial_setup/tui/spokes/eula.py:47
 msgid "I accept the license agreement."
 msgstr "నేను లైసెన్స్ ఒప్పందపత్రం ఆమోదిస్తున్నాను."
 
-#: ../initial_setup/tui/spokes/eula.py:43
-#: ../initial_setup/gui/spokes/eula.py:41
+#: ../initial_setup/tui/spokes/eula.py:51
+#: ../initial_setup/gui/spokes/eula.py:53
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
 msgstr ""
 "ఏ లైసెన్స్ కనబడలేదు. దయచేసి అది ఇక్కడ http://bugzilla.redhat.com "
 "నివేదించండి."
 
-#: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:81
+#: ../initial_setup/tui/spokes/eula.py:67
+#: ../initial_setup/gui/spokes/eula.py:94
 msgid "No license found"
 msgstr "ఏ లైసెన్స్ కనబడలేదు"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License accepted"
 msgstr "లైసెన్స్ ఆమోదించబడెను"
 
-#: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:83
+#: ../initial_setup/tui/spokes/eula.py:69
+#: ../initial_setup/gui/spokes/eula.py:96
 msgid "License not accepted"
 msgstr "లైసెన్స్ ఆమోదించబడలేదు"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:17
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:18
 #, python-format
 msgid "Initial setup of %(product)s"
 msgstr "%(product)s యొక్క ప్రాథమిక అమర్పు"
 
-#: ../initial_setup/tui/hubs/initial_setup_hub.py:19
+#: ../initial_setup/tui/hubs/initial_setup_hub.py:20
 msgid "Initial setup"
 msgstr "ప్రాథమిక అమర్పు"
 
-#: ../initial_setup/gui/spokes/eula.py:26
+#: ../initial_setup/gui/spokes/eula.py:34
 msgid "_LICENSE INFORMATION"
 msgstr "లైసెన్స్ సమాచారం (_L)"
 
