@@ -1,9 +1,8 @@
 Summary: Initial system configuration utility
 Name: initial-setup
 URL: http://fedoraproject.org/wiki/FirstBoot
-Version: 0.3.9.5
+Version: 0.3.9.12
 Release: 1%{?dist}
-BuildArch: noarch
 
 # This is a Red Hat maintained package which is specific to
 # our distribution.
@@ -12,9 +11,9 @@ BuildArch: noarch
 # or via direct git checkout:
 # git clone git://git.fedorahosted.org/initial-setup.git
 Source0: %{name}-%{version}.tar.gz
-Patch0: initial-setup-0.3.9.4-rhbz1028365.patch
 
-%define anacondaver 19.31.27
+%define debug_package %{nil}
+%define anacondaver 19.31.75
 
 License: GPLv2+
 Group: System Environment/Base
@@ -47,7 +46,6 @@ a series of steps that allows for easier configuration of the machine.
 
 %prep
 %setup -q
-%patch0 -p1
 
 # remove upstream egg-info
 rm -rf *.egg-info
@@ -102,6 +100,49 @@ fi
 
 
 %changelog
+* Tue Apr 1 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.12-1
+- Set initial-setup translation domain for the hub and EULA spoke (mkolman)
+  Resolves: rhbz#1040240
+
+* Tue Mar 18 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.11-1
+- Rebuild with new translations
+  Resolves: rhbz#1040240
+
+* Mon Feb 24 2014 Martin Kolman <mkolman@redhat.com> - 0.3.9.10-1
+- Rebuild with new translations
+  Resolves: rhbz#1040240
+
+* Tue Feb 11 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.9-1
+- Try to quit plymouth before running our X server instance
+  Resolves: rhbz#1058329
+- Get rid of the empty debuginfo package
+  Related: rhbz#1057590
+
+* Fri Jan 25 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.8-1
+- Ignore the SIGINT
+  Resolves: rhbz#1035590
+
+* Fri Jan 24 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.7-2
+- Make initial-setup an arch specific package
+  Resolves: rhbz#1057590
+
+* Thu Jan 23 2014 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.7-1
+- Include new translations
+  Resolves: rhbz#1030361
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.3.9.6-2
+- Mass rebuild 2013-12-27
+
+* Wed Dec 18 2013 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.6-1
+- Ignore .po and generated files in po/ (dshea)
+  Related: rhbz#1040240
+- Mark title strings in the initial-setup hub as translatable (dshea)
+  Resolves: rhbz#1040240
+- Reword the EULA spokes' status messages (vpodzime)
+  Resolves: rhbz#1039672
+- Cancel formatting of EULA when putting it into the text buffer (vpodzime)
+  Resolves: rhbz#1039675
+
 * Mon Nov 18 2013 Vratislav Podzimek <vpodzime@redhat.com> - 0.3.9.5-1
 - Override distribution text in spokes (vpodzime)
   Resolves: rhbz#1028370

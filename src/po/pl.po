@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-18 14:52+0100\n"
-"PO-Revision-Date: 2013-11-01 16:55+0000\n"
+"POT-Creation-Date: 2014-02-11 16:53+0100\n"
+"PO-Revision-Date: 2013-12-18 14:35+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/fedora/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -57,18 +57,18 @@ msgid "No license found. Please report this at http://bugzilla.redhat.com"
 msgstr "Nie odnaleziono licencji. Prosimy to zgłosić pod adresem http://bugzilla.redhat.com"
 
 #: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:65
+#: ../initial_setup/gui/spokes/eula.py:81
 msgid "No license found"
 msgstr "Nie odnaleziono licencji"
 
 #: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:67
-msgid "License agreed"
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License accepted"
 msgstr "Wyrażono zgodę na licencję"
 
 #: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:67
-msgid "License not agreed"
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License not accepted"
 msgstr "Nie wyrażono zgody na licencję"
 
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:17
@@ -97,9 +97,17 @@ msgid "I _accept the license agreement."
 msgstr "_Przyjmuję warunki licencji."
 
 #: tmp/initial_setup.glade.h:1
+msgid "DISTRIBUTION SETUP"
+msgstr "USTAWIENIA DYSTRYBUCJI"
+
+#: tmp/initial_setup.glade.h:2
+msgid "INITIAL SETUP"
+msgstr "POCZĄTKOWE USTAWIENIA"
+
+#: tmp/initial_setup.glade.h:3
 msgid "_QUIT"
 msgstr "ZA_KOŃCZ"
 
-#: tmp/initial_setup.glade.h:2
+#: tmp/initial_setup.glade.h:4
 msgid "_FINISH CONFIGURATION"
 msgstr "_ZAKOŃCZ KONFIGURACJĘ"

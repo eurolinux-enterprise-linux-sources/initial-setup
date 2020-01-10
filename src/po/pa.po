@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# asaini <asaini@redhat.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-18 14:52+0100\n"
-"PO-Revision-Date: 2013-11-01 16:49+0000\n"
-"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"POT-Creation-Date: 2014-02-11 16:53+0100\n"
+"PO-Revision-Date: 2014-01-21 08:14+0000\n"
+"Last-Translator: asaini <asaini@redhat.com>\n"
 "Language-Team: Panjabi (Punjabi) (http://www.transifex.com/projects/p/fedora/language/pa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,71 +22,79 @@ msgstr ""
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr ""
+msgstr "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਸੰਰਚਨਾ ਕਾਰਵਾਈ ਨੂੰ ਛੱਡਣਾ ਚਾਹੁੰਦੇ ਹੋ?\nਜੇ ਤੁਸੀਂ ਕਰਦੇ ਹੋ ਤਾਂ ਨਤੀਜਾ ਇੱਕ ਗੈਰ-ਵਰਤੋਂਯੋਗ ਸਿਸਟਮ ਦੇ ਰੂਪ ਵਿੱਚ ਹੋ ਸਕਦਾ ਹੈ। ਲਾਇਸੰਸ ਇਕਰਾਰਨਾਮਾ ਸਵੀਕਾਰ ਹੋਣ ਤੱਕ, ਸਿਸਟਮ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਜਾਵੇਗਾ।"
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
-msgstr ""
+msgstr "ਲਾਇਸੰਸ ਜਾਣਕਾਰੀ"
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
 #: ../initial_setup/tui/spokes/eula.py:39
 msgid "Read the License Agreement"
-msgstr ""
+msgstr "ਲਾਈਸੈਂਸ ਇਕਰਾਰਨਾਮਾ ਪੜ੍ਹੋ"
 
 #: ../initial_setup/tui/spokes/eula.py:40
 msgid "I accept the license agreement."
-msgstr ""
+msgstr "ਮੈਂ ਲਾਈਸੈਂਸ ਇਕਰਾਰਨਾਮਾ ਸਵੀਕਾਰ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ।"
 
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr ""
+msgstr "ਕੋਈ ਲਾਈਸੈਂਸ ਨਹੀਂ ਲੱਭਿਆ। ਕਿਰਪਾ ਕਰ ਕੇ http://bugzilla.redhat.com ਤੇ ਸੂਚਿਤ ਕਰੋ"
 
 #: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:65
+#: ../initial_setup/gui/spokes/eula.py:81
 msgid "No license found"
-msgstr ""
+msgstr "ਕੋਈ ਲਾਈਸੈਂਸ ਨਹੀਂ ਲੱਭਿਆ"
 
 #: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:67
-msgid "License agreed"
-msgstr ""
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License accepted"
+msgstr "ਲਾਇਸੰਸ ਪ੍ਰਵਾਨਿਤ"
 
 #: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:67
-msgid "License not agreed"
-msgstr ""
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License not accepted"
+msgstr "ਲਾਇਸੰਸ ਪ੍ਰਵਾਨਿਤ ਨਹੀਂ"
 
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:17
 #, python-format
 msgid "Initial setup of %(product)s"
-msgstr ""
+msgstr "%(product)s ਦਾ ਸ਼ੁਰੂਆਤੀ ਸੈੱਟਅਪ"
 
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:19
 msgid "Initial setup"
-msgstr ""
+msgstr "ਸ਼ੁਰੂਆਤੀ ਸੈੱਟਅਪ"
 
 #: ../initial_setup/gui/spokes/eula.py:26
 msgid "_LICENSE INFORMATION"
-msgstr ""
+msgstr "ਲਾਇਸੰਸ ਜਾਣਕਾਰੀ (_L)"
 
 #: tmp/eula.glade.h:1
 msgid "LICENSE INFORMATION"
-msgstr ""
+msgstr "ਲਾਇਸੰਸ ਜਾਣਕਾਰੀ"
 
 #: tmp/eula.glade.h:2
 msgid "License Agreement:"
-msgstr ""
+msgstr "ਲਾਈਸੈਂਸ ਇਕਰਾਰਨਾਮਾ:"
 
 #: tmp/eula.glade.h:3
 msgid "I _accept the license agreement."
-msgstr ""
+msgstr "ਮੈਂ ਲਾਈਸੈਂਸ ਇਕਰਾਰਨਾਮਾ ਸਵੀਕਾਰ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ। (_a)"
 
 #: tmp/initial_setup.glade.h:1
-msgid "_QUIT"
-msgstr ""
+msgid "DISTRIBUTION SETUP"
+msgstr "ਵੰਡ ਸੈੱਟਅੱਪ"
 
 #: tmp/initial_setup.glade.h:2
+msgid "INITIAL SETUP"
+msgstr "ਸ਼ੁਰੂਆਤੀ ਸੈੱਟਅੱਪ"
+
+#: tmp/initial_setup.glade.h:3
+msgid "_QUIT"
+msgstr "ਛੱਡ ਦਿਉ (_Q)"
+
+#: tmp/initial_setup.glade.h:4
 msgid "_FINISH CONFIGURATION"
-msgstr ""
+msgstr "ਸੰਰਚਨਾ ਪੂਰੀ ਕਰੋ (_F)"

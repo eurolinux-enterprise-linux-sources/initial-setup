@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Krishnababu Krothapalli <kkrothap@redhat.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-18 14:52+0100\n"
-"PO-Revision-Date: 2013-11-01 16:49+0000\n"
-"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"POT-Creation-Date: 2014-02-11 16:53+0100\n"
+"PO-Revision-Date: 2014-01-16 13:42+0000\n"
+"Last-Translator: Krishnababu Krothapalli <krisnababu@gmail.com>\n"
 "Language-Team: Telugu (http://www.transifex.com/projects/p/fedora/language/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,71 +22,79 @@ msgstr ""
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr ""
+msgstr "మీరు ఆకృతీకరణ కార్యక్రమాన్ని నిశ్చయంగా విడవాలని అనుకొంటున్నారా?\nఅలా చేస్తే మీ వ్యవస్థ అస్థిరమైనదిగా కావచ్చు. లైసెన్సు ఒప్పందపత్రం ఆమోదించితే తప్పించి, వ్యవస్థ పునఃప్రారంభించబడును."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
-msgstr ""
+msgstr "లైసెన్స్ సమాచారం"
 
 #. make the options aligned to the same column (the checkbox has the
 #. '[ ]' prepended)
 #: ../initial_setup/tui/spokes/eula.py:39
 msgid "Read the License Agreement"
-msgstr ""
+msgstr "లైసెన్స్ ఒప్పందపత్రం చదువుము"
 
 #: ../initial_setup/tui/spokes/eula.py:40
 msgid "I accept the license agreement."
-msgstr ""
+msgstr "నేను లైసెన్స్ ఒప్పందపత్రం ఆమోదిస్తున్నాను."
 
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr ""
+msgstr "ఏ లైసెన్స్ కనబడలేదు. దయచేసి అది ఇక్కడ http://bugzilla.redhat.com నివేదించండి."
 
 #: ../initial_setup/tui/spokes/eula.py:59
-#: ../initial_setup/gui/spokes/eula.py:65
+#: ../initial_setup/gui/spokes/eula.py:81
 msgid "No license found"
-msgstr ""
+msgstr "ఏ లైసెన్స్ కనబడలేదు"
 
 #: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:67
-msgid "License agreed"
-msgstr ""
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License accepted"
+msgstr "లైసెన్స్ ఆమోదించబడెను"
 
 #: ../initial_setup/tui/spokes/eula.py:61
-#: ../initial_setup/gui/spokes/eula.py:67
-msgid "License not agreed"
-msgstr ""
+#: ../initial_setup/gui/spokes/eula.py:83
+msgid "License not accepted"
+msgstr "లైసెన్స్ ఆమోదించబడలేదు"
 
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:17
 #, python-format
 msgid "Initial setup of %(product)s"
-msgstr ""
+msgstr "%(product)s యొక్క ప్రాథమిక అమర్పు"
 
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:19
 msgid "Initial setup"
-msgstr ""
+msgstr "ప్రాథమిక అమర్పు"
 
 #: ../initial_setup/gui/spokes/eula.py:26
 msgid "_LICENSE INFORMATION"
-msgstr ""
+msgstr "లైసెన్స్ సమాచారం (_L)"
 
 #: tmp/eula.glade.h:1
 msgid "LICENSE INFORMATION"
-msgstr ""
+msgstr "లైసెన్స్ సమాచారం"
 
 #: tmp/eula.glade.h:2
 msgid "License Agreement:"
-msgstr ""
+msgstr "లైసెన్స్ ఒప్పందపత్రం:"
 
 #: tmp/eula.glade.h:3
 msgid "I _accept the license agreement."
-msgstr ""
+msgstr "నేను లైసెన్స్ ఒప్పందపత్రం ఆమోదిస్తున్నాను. (_a)"
 
 #: tmp/initial_setup.glade.h:1
-msgid "_QUIT"
-msgstr ""
+msgid "DISTRIBUTION SETUP"
+msgstr "పంపిణీ అమర్పు"
 
 #: tmp/initial_setup.glade.h:2
+msgid "INITIAL SETUP"
+msgstr "ప్రాథమిక అమర్పు"
+
+#: tmp/initial_setup.glade.h:3
+msgid "_QUIT"
+msgstr "నిష్క్రమించు (_Q)"
+
+#: tmp/initial_setup.glade.h:4
 msgid "_FINISH CONFIGURATION"
-msgstr ""
+msgstr "ఆకృతీకరణ పూర్తిచేయి (_F)"

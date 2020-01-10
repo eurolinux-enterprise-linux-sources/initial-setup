@@ -25,6 +25,7 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalSpoke):
     icon = "application-certificate-symbolic"
     title = N_("_LICENSE INFORMATION")
     category = LocalizationCategory
+    translationDomain = "initial-setup"
 
     def initialize(self):
         NormalSpoke.initialize(self)
@@ -45,8 +46,24 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalSpoke):
         self._eula_buffer.set_text("")
         itr = self._eula_buffer.get_iter_at_offset(0)
         with open(license_file, "r") as fobj:
-            for line in fobj:
-                self._eula_buffer.insert(itr, line)
+            fobj_lines = fobj.xreadlines()
+
+            # insert the first line without prefixing with space
+            try:
+                first_line = fobj_lines.next()
+            except StopIteration:
+                # nothing in the file
+                return
+            self._eula_buffer.insert(itr, first_line.strip())
+
+            # EULA file is preformatted for the console, we want to let Gtk
+            # format it (blank lines should be preserved)
+            for line in fobj_lines:
+                stripped_line = line.strip()
+                if stripped_line:
+                    self._eula_buffer.insert(itr, " " + stripped_line)
+                else:
+                    self._eula_buffer.insert(itr, "\n\n")
 
     def refresh(self):
         self._agree_check_button.set_sensitive(self._have_eula)
@@ -64,7 +81,7 @@ class EULAspoke(FirstbootOnlySpokeMixIn, NormalSpoke):
         if not self._have_eula:
             return _("No license found")
 
-        return _("License agreed") if self.data.eula.agreed else _("License not agreed")
+        return _("License accepted") if self.data.eula.agreed else _("License not accepted")
 
     def on_check_button_toggled(self, checkbutton, *args):
         if self._agree_check_button.get_active():
