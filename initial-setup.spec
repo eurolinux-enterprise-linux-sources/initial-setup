@@ -1,7 +1,7 @@
 Summary: Initial system configuration utility
 Name: initial-setup
 URL: http://fedoraproject.org/wiki/InitialSetup
-Version: 0.3.9.23
+Version: 0.3.9.30
 Release: 1%{?dist}
 
 # This is a Red Hat maintained package which is specific to
@@ -13,7 +13,7 @@ Release: 1%{?dist}
 Source0: %{name}-%{version}.tar.gz
 
 %define debug_package %{nil}
-%define anacondaver 19.31.90
+%define anacondaver 21.48.22.36
 
 License: GPLv2+
 Group: System Environment/Base
@@ -27,7 +27,6 @@ BuildRequires: gtk-doc
 BuildRequires: gobject-introspection-devel
 BuildRequires: glade-devel
 BuildRequires: pygobject3
-BuildRequires: anaconda >= %{anacondaver}
 BuildRequires: python-di
 
 Requires: python
@@ -65,7 +64,6 @@ rm -rf *.egg-info
 make po-files
 
 %check
-%{__python} setup.py nosetests
 
 %install
 %{__python} setup.py install --skip-build --root $RPM_BUILD_ROOT
@@ -73,23 +71,22 @@ make install-po-files
 %find_lang %{name}
 
 %post
-if [ $1 -ne 2 -a ! -f /etc/sysconfig/initial-setup ]; then
-  platform="$(arch)"
-  if [ "$platform" = "s390" -o "$platform" = "s390x" ]; then
-    echo "RUN_INITIAL_SETUP=YES" > /etc/sysconfig/initial-setup
-  else
-    %systemd_post initial-setup-graphical.service
-    %systemd_post initial-setup-text.service
-  fi
-fi
+%systemd_post initial-setup-text.service
 
 %preun
-%systemd_preun initial-setup-graphical.service
 %systemd_preun initial-setup-text.service
 
 %postun
-%systemd_postun_with_restart initial-setup-graphical.service
 %systemd_postun_with_restart initial-setup-text.service
+
+%post gui
+%systemd_post initial-setup-graphical.service
+
+%preun gui
+%systemd_preun initial-setup-graphical.service
+
+%postun gui
+%systemd_postun_with_restart initial-setup-graphical.service
 
 %files -f %{name}.lang
 %doc COPYING README
@@ -110,6 +107,50 @@ fi
 
 
 %changelog
+* Tue Sep 22 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.30-1
+- Only root should be able to read the initial-setup-ks.cfg file (#1264336) (mkolman)
+  Resolves: rhbz#1264336
+
+* Tue Sep 01 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.29-1
+- Move gui scriptlets to the gui subpackage (#1181209) (mkolman)
+  Resolves: rhbz#1181209
+
+* Thu Aug 27 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.28-1
+- Run the TUI service before hvc0.service (#1209731) (mmatsuya)
+  Resolves: rhbz#1209731
+- Don't create /etc/sysconfig/initial-setup on s390 (#1181209) (mkolman)
+  Related: rhbz#1181209
+- Setup the locale before starting the UI (dshea)
+  Resolves: rhbz#1198642
+
+* Wed Jul 22 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.27-1
+- Switch to Zanata for translations (#1229747) (mkolman)
+  Related: rhbz#1229747
+
+* Mon Jul 13 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.26-2
+- Don't try to run nonexistent tests (#1229747) (mkolman)
+  Related: rhbz#1229747
+
+* Thu Jul 9 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.26-1
+- Use systemd service status for run detection on the S390 console (#1181209) (mkolman)
+  Resolves: rhbz#1181209
+- Bump the required Anaconda version (#1229747) (mkolman)
+  Related: rhbz#1229747
+
+* Fri Jul 3 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.25-2
+- Don't show the EULA spoke in reconfig mode if license is already accepted (#1110439) (mkolman)
+  Related: rhbz#1110439
+- Read the kickstart from previous IS run, if available (#1110439) (mkolman)
+  Related: rhbz#1110439
+- Add support for externally triggered reconfig mode (#1110439) (mkolman)
+  Resolves: rhbz#1110439
+
+* Wed Jun 17 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.24-1
+- Make Initial Setup compatible with rebased Anaconda (#1229747) (mkolman)
+  Resolves: rhbz#1229747
+- Log the reason if GUI import fails (#1229747) (mkolman)
+  Related: rhbz#1229747
+
 * Tue Jan 20 2015 Martin Kolman <mkolman@redhat.com> - 0.3.9.23-1
 - Redirect the EULA spoke help button to the Initial Setup hub help file (#1072033) (mkolman)
   Related: rhbz#1072033

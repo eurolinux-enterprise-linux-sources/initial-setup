@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Yulia <yulia.poyarkova@redhat.com>, 2013-2014
+# Yulia <yulia.poyarkova@redhat.com>, 2014
+# Игорь Горбунов <igor.gorbounov@gmail.com>, 2013
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-07-10 01:02+0000\n"
+"PO-Revision-Date: 2014-07-09 09:02-0400\n"
 "Last-Translator: Yulia <yulia.poyarkova@redhat.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/initial-setup/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "Вы действительно хотите прервать процесс конфигурации?\nЭто может нарушить работу системы. Если вы не согласитесь с условиями лицензии, система будет перезагружена."
+msgstr ""
+"Вы действительно хотите прервать процесс конфигурации?\n"
+"Это может нарушить работу системы. Если вы не согласитесь с условиями лицензии, система будет перезагружена."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"

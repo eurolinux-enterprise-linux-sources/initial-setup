@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ani Peter <apeter@redhat.com>, 2014
+# Ani Peter <apeter@redhat.com>, 2013-2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-20 09:05+0000\n"
+"PO-Revision-Date: 2014-11-04 05:47-0500\n"
 "Last-Translator: Ani Peter <apeter@redhat.com>\n"
 "Language-Team: Malayalam (http://www.transifex.com/projects/p/initial-setup/language/ml/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ml\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "നിങ്ങള്‍ക്കു് ക്രമീകരണ പ്രക്രിയില്‍ നിന്നും പുറത്തു് കടക്കണമെന്നുറപ്പാണോ?\nഒരു പക്ഷേ ഉപയോഗപ്രദമല്ലാത്ത ഒരു സിസ്റ്റമായിരിയ്ക്കും നിങ്ങള്‍ക്കു് ലഭിയ്ക്കുക. ലൈസന്‍സ് എഗ്രീമെന്റ് സ്വീകരിച്ചില്ലെങ്കില്‍ സിസ്റ്റം റീബൂട്ട് ചെയ്യുന്നതാണു്."
+msgstr ""
+"നിങ്ങള്‍ക്കു് ക്രമീകരണ പ്രക്രിയില്‍ നിന്നും പുറത്തു് കടക്കണമെന്നുറപ്പാണോ?\n"
+"ഒരു പക്ഷേ ഉപയോഗപ്രദമല്ലാത്ത ഒരു സിസ്റ്റമായിരിയ്ക്കും നിങ്ങള്‍ക്കു് ലഭിയ്ക്കുക. ലൈസന്‍സ് എഗ്രീമെന്റ് സ്വീകരിച്ചില്ലെങ്കില്‍ സിസ്റ്റം റീബൂട്ട് ചെയ്യുന്നതാണു്."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +45,9 @@ msgstr "ലൈസന്‍സ് എഗ്രീമെന്റ് സ്വീ�
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "ലൈസന്‍സ് ലഭ്യമായില്ല. ദയവായി ഇതിനെപ്പറ്റി http://bugzilla.redhat.com-ല്ഡ രേഖപ്പെടുത്തുക."
+msgstr ""
+"ലൈസന്‍സ് ലഭ്യമായില്ല. ദയവായി ഇതിനെപ്പറ്റി http://bugzilla.redhat.com-ല്ഡ "
+"രേഖപ്പെടുത്തുക."
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

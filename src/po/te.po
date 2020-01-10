@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Krishnababu Krothapalli <kkrothap@redhat.com>, 2014
+# Krishnababu Krothapalli <kkrothap@redhat.com>, 2013
+# Krishnababu Krothapalli <krisnababu@gmail.com>, 2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-16 13:42+0000\n"
+"PO-Revision-Date: 2014-01-30 03:51-0500\n"
 "Last-Translator: Krishnababu Krothapalli <krisnababu@gmail.com>\n"
 "Language-Team: Telugu (http://www.transifex.com/projects/p/initial-setup/language/te/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "మీరు ఆకృతీకరణ కార్యక్రమాన్ని నిశ్చయంగా విడవాలని అనుకొంటున్నారా?\nఅలా చేస్తే మీ వ్యవస్థ అస్థిరమైనదిగా కావచ్చు. లైసెన్సు ఒప్పందపత్రం ఆమోదించితే తప్పించి, వ్యవస్థ పునఃప్రారంభించబడును."
+msgstr ""
+"మీరు ఆకృతీకరణ కార్యక్రమాన్ని నిశ్చయంగా విడవాలని అనుకొంటున్నారా?\n"
+"అలా చేస్తే మీ వ్యవస్థ అస్థిరమైనదిగా కావచ్చు. లైసెన్సు ఒప్పందపత్రం ఆమోదించితే తప్పించి, వ్యవస్థ పునఃప్రారంభించబడును."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +46,9 @@ msgstr "నేను లైసెన్స్ ఒప్పందపత్రం 
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "ఏ లైసెన్స్ కనబడలేదు. దయచేసి అది ఇక్కడ http://bugzilla.redhat.com నివేదించండి."
+msgstr ""
+"ఏ లైసెన్స్ కనబడలేదు. దయచేసి అది ఇక్కడ http://bugzilla.redhat.com "
+"నివేదించండి."
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

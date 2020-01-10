@@ -4,12 +4,14 @@
 # 
 # Translators:
 # Manuela Silva <manuela.silva@sky.com>, 2014
+# Ricardo Pinto <ricardo.bigote@gmail.com>, 2013
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-04-30 13:03+0000\n"
+"PO-Revision-Date: 2014-04-29 08:57-0400\n"
 "Last-Translator: Manuela Silva <manuela.silva@sky.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/initial-setup/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "Tem a certeza que deseja sair do processo da configuração?\nSe o fizer pode acabar com um sistema inutilizável. A menos que aceite o Acordo da Licença, o sistema será reiniciado."
+msgstr ""
+"Tem a certeza que deseja sair do processo da configuração?\n"
+"Se o fizer pode acabar com um sistema inutilizável. A menos que aceite o Acordo da Licença, o sistema será reiniciado."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +46,9 @@ msgstr "Eu aceito o acordo da licença."
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "Não foi encontrada nenhuma licença. Por favor, comunique isto em http://bugzilla.redhat.com"
+msgstr ""
+"Não foi encontrada nenhuma licença. Por favor, comunique isto em "
+"http://bugzilla.redhat.com"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Momcilo Medic <medicmomcilo@gmail.com>, 2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-11-17 04:03+0000\n"
+"PO-Revision-Date: 2014-11-16 10:58-0500\n"
 "Last-Translator: Momcilo Medic <medicmomcilo@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/projects/p/initial-setup/language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "Да ли сте сигурни да желите напустити поступак подешавања?\nМогуће је да систем неће бити употребљив због тога. Ако не прихватате Лиценцни споразум, систем ће се поново покренути."
+msgstr ""
+"Да ли сте сигурни да желите напустити поступак подешавања?\n"
+"Могуће је да систем неће бити употребљив због тога. Ако не прихватате Лиценцни споразум, систем ће се поново покренути."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +45,8 @@ msgstr "Прихватам лиценцни споразум."
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "Лиценца није пронађена. Молим пријавите ово на http://bugzilla.redhat.com"
+msgstr ""
+"Лиценца није пронађена. Молим пријавите ово на http://bugzilla.redhat.com"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

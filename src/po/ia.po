@@ -3,12 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Nik Kalach <nik.kalach@inbox.ru>, 2013
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2013-12-18 09:57+0000\n"
+"PO-Revision-Date: 2013-12-18 05:00-0500\n"
 "Last-Translator: vpodzime <vpodzime@redhat.com>\n"
 "Language-Team: Interlingua (http://www.transifex.com/projects/p/initial-setup/language/ia/)\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ia\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""

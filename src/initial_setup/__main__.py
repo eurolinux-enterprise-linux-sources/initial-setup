@@ -5,17 +5,22 @@ import signal
 import pykickstart
 import logging
 from pyanaconda.users import Users
-from initial_setup.post_installclass import InstallClass
+from initial_setup.post_installclass import PostInstallClass
 from initial_setup import initial_setup_log
 from pyanaconda import iutil
+from pykickstart.constants import FIRSTBOOT_RECONFIG
+from pyanaconda.localization import setup_locale_environment, setup_locale
 
 INPUT_KICKSTART_PATH = "/root/anaconda-ks.cfg"
 OUTPUT_KICKSTART_PATH = "/root/initial-setup-ks.cfg"
+RECONFIG_FILE = "/etc/reconfigSys"
 
 # set root to "/", we are now in the installed system
 iutil.setSysroot("/")
 
 signal.signal(signal.SIGINT, signal.SIG_IGN)
+
+external_reconfig = os.path.exists(RECONFIG_FILE)
 
 initial_setup_log.init()
 log = logging.getLogger("initial-setup")
@@ -27,6 +32,9 @@ else:
 
 log.debug("display mode detected: %s", mode)
 
+if external_reconfig:
+    log.debug("running in externally triggered reconfig mode")
+
 if mode == "gui":
     # We need this so we can tell GI to look for overrides objects
     # also in anaconda source directories
@@ -34,14 +42,6 @@ if mode == "gui":
     for p in os.environ.get("ANACONDA_WIDGETS_OVERRIDES", "").split(":"):
         gi.overrides.__path__.insert(0, p)
     log.debug("GI overrides imported")
-
-# set the root path to / so the imported spokes
-# know where to apply their changes
-from pyanaconda import constants
-
-# this has to stay in the form constants.ROOT_PATH so it modifies
-# the scalar in anaconda, not the local copy here
-constants.ROOT_PATH = "/"
 
 from pyanaconda.addons import collect_addon_paths
 
@@ -92,44 +92,62 @@ commandMap = dict((k, kickstart.commandMap[k]) for k in kickstart_commands)
 # Prepare new data object
 data = kickstart.AnacondaKSHandler(addon_module_paths["ks"], commandUpdates=commandMap)
 
-log.info("parsing input kickstart %s", INPUT_KICKSTART_PATH)
+kickstart_path = INPUT_KICKSTART_PATH
+if os.path.exists(OUTPUT_KICKSTART_PATH):
+    log.info("using kickstart from previous run for input")
+    kickstart_path = OUTPUT_KICKSTART_PATH
+
+log.info("parsing input kickstart %s", kickstart_path)
 try:
     # Read the installed kickstart
     parser = kickstart.AnacondaKSParser(data)
-    parser.readKickstart(INPUT_KICKSTART_PATH)
+    parser.readKickstart(kickstart_path)
     log.info("kickstart parsing done")
 except pykickstart.errors.KickstartError as kserr:
-    log.exception("kickstart parsing failed")
+    log.exception("kickstart parsing failed: %s" % kserr)
     sys.exit(1)
+
+if external_reconfig:
+    # set the reconfig flag in kickstart so that
+    # relevant spokes show up
+    data.firstboot.firstboot = FIRSTBOOT_RECONFIG
+
+# Normalize the locale environment variables
+if data.lang.seen:
+    locale_arg = data.lang.lang
+else:
+    locale_arg = None
+setup_locale_environment(locale_arg, prefer_environment=True)
+setup_locale(os.environ['LANG'], text_mode=mode != "gui")
 
 if mode == "gui":
     try:
         # Try to import IS gui specifics
         log.debug("trying to import GUI")
-        import gui
+        import initial_setup.gui
     except ImportError:
-        log.error("GUI import failed, falling back to TUI")
+        log.exception("GUI import failed, falling back to TUI")
         mode = "tui"
 
 if mode == "gui":
     # gui already imported (see above)
 
     # Add addons to search paths
-    gui.InitialSetupGraphicalUserInterface.update_paths(addon_module_paths)
+    initial_setup.gui.InitialSetupGraphicalUserInterface.update_paths(addon_module_paths)
 
     # Initialize the UI
     log.debug("initializing GUI")
-    ui = gui.InitialSetupGraphicalUserInterface(None, None, InstallClass())
+    ui = initial_setup.gui.InitialSetupGraphicalUserInterface(None, None, PostInstallClass())
 else:
     # Import IS gui specifics
-    import tui
+    import initial_setup.tui
 
     # Add addons to search paths
-    tui.InitialSetupTextUserInterface.update_paths(addon_module_paths)
+    initial_setup.tui.InitialSetupTextUserInterface.update_paths(addon_module_paths)
 
     # Initialize the UI
     log.debug("initializing TUI")
-    ui = tui.InitialSetupTextUserInterface(None, None, None)
+    ui = initial_setup.tui.InitialSetupTextUserInterface(None, None, None)
 
 # Pass the data object to user inteface
 log.debug("setting up the UI")
@@ -183,8 +201,28 @@ for section in sections:
 log.info("executing addons")
 data.addons.execute(None, data, None, u)
 
+if external_reconfig:
+    # prevent the reconfig flag from being written out,
+    # to prevent the reconfig mode from being enabled
+    # without the /etc/reconfigSys file being present
+    data.firstboot.firstboot = None
+
 # Write the kickstart data to file
 log.info("writing the Initial Setup kickstart file %s", OUTPUT_KICKSTART_PATH)
-with open(OUTPUT_KICKSTART_PATH, "w") as f:
-    f.write(str(data))
-log.info("finished writing the Initial Setup kickstart file")
+# Make sure that the output kickstart file is only readable by root (0600)
+try:
+    fd = iutil.eintr_retry_call(os.open, OUTPUT_KICKSTART_PATH, os.O_WRONLY | os.O_CREAT, 0o600)
+except OSError as e:
+    log.exception("can't open output kickstart file for writing: %s", OUTPUT_KICKSTART_PATH)
+    fd = None
+if fd is not None:
+    with os.fdopen(fd, "w") as f:
+        f.write(str(data))
+    log.info("finished writing the Initial Setup kickstart file")
+
+# Remove the reconfig file, if any - otherwise the reconfig mode
+# would start again next time the Initial Setup service is enabled
+if external_reconfig and os.path.exists(RECONFIG_FILE):
+    log.debug("removing the reconfig file")
+    os.remove(RECONFIG_FILE)
+    log.debug("the reconfig file has been removed")

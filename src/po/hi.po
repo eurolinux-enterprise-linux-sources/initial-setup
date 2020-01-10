@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Rajesh Ranjan <rranjan@redhat.com>, 2014
+# Rajesh Ranjan <rranjan@redhat.com>, 2013
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-17 06:31+0000\n"
+"PO-Revision-Date: 2014-01-17 02:02-0500\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/projects/p/initial-setup/language/hi/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "क्या आप वाकई विन्यास प्रक्रिया को छोड़ना चाहते हैं?\\n \nआप किसी अप्रयोज्य तंत्र के साथ समाप्त होंगे यदि आप ऐसा करते हैं. जबतक लाइसेंस मसौदा स्वीकार किया जाता है, तबतक तंत्र रीबूट किया जाएगा."
+msgstr ""
+"क्या आप वाकई विन्यास प्रक्रिया को छोड़ना चाहते हैं?\\n \n"
+"आप किसी अप्रयोज्य तंत्र के साथ समाप्त होंगे यदि आप ऐसा करते हैं. जबतक लाइसेंस मसौदा स्वीकार किया जाता है, तबतक तंत्र रीबूट किया जाएगा."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"

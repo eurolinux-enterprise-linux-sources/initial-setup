@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# eukim <eukim@redhat.com>, 2014
+#, 2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-20 04:25+0000\n"
+"PO-Revision-Date: 2014-01-19 10:16-0500\n"
 "Last-Translator: eukim <eukim@redhat.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/initial-setup/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "정말로 설정 프로세스를 종료하시겠습니까?\n설정 프로세스를 종료하면 시스템을 사용하지 못할 수 도 있습니다. 약관에 동의하지 않으면 시스템이 다시 시작됩니다."
+msgstr ""
+"정말로 설정 프로세스를 종료하시겠습니까?\n"
+"설정 프로세스를 종료하면 시스템을 사용하지 못할 수 도 있습니다. 약관에 동의하지 않으면 시스템이 다시 시작됩니다."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"

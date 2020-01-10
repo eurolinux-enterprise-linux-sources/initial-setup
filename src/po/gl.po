@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Xosé <xosecalvo@gmail.com>, 2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2013-12-18 09:57+0000\n"
-"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
+"PO-Revision-Date: 2014-04-07 05:50-0400\n"
+"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/initial-setup/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
@@ -60,11 +63,11 @@ msgstr ""
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:17
 #, python-format
 msgid "Initial setup of %(product)s"
-msgstr ""
+msgstr "Configuración inicial de %(product)s"
 
 #: ../initial_setup/tui/hubs/initial_setup_hub.py:19
 msgid "Initial setup"
-msgstr ""
+msgstr "Configuración inicial"
 
 #: ../initial_setup/gui/spokes/eula.py:26
 msgid "_LICENSE INFORMATION"
@@ -84,16 +87,16 @@ msgstr ""
 
 #: tmp/initial_setup.glade.h:1
 msgid "DISTRIBUTION SETUP"
-msgstr ""
+msgstr "CONFIGURACIÓN DA DISTRIBUCIÓN"
 
 #: tmp/initial_setup.glade.h:2
 msgid "INITIAL SETUP"
-msgstr ""
+msgstr "CONFIGURACIÓN INICIAL"
 
 #: tmp/initial_setup.glade.h:3
 msgid "_QUIT"
-msgstr ""
+msgstr "_SAÍR"
 
 #: tmp/initial_setup.glade.h:4
 msgid "_FINISH CONFIGURATION"
-msgstr ""
+msgstr "_REMATAR A CONFIGURACIÓN"

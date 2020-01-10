@@ -3,26 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bartosz Sapijaszko <bartosz@sapek.net>, 2002
-# dcantrel <dcantrell@redhat.com>, 2011
-# Dimitris Glezos <glezos@indifex.com>, 2011
-# Dimitris Glezos <glezos@transifex.com>, 2011
-# Jacek Smyda <smyda@posexperts.com.pl>, 1998
-# Leszek Matok <lam@lac.pl>, 2004
-# Pawel Szopinski <pawel@szopinski.co.uk>, 2004
 # Piotr Drąg <piotrdrag@gmail.com>, 2013
-# Radosław Zawartko <radzaw@radzaw.one.pl>, 2004
-# sonyam <sonyam@tlen.pl>, 2004
-# Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006
-# Tom Berner <tom@lodz.pl>, 2005
-# Tom Berner <tom@man.lodz.pl>, 2004
-# Wojciech Kapusta <wojciech@aviary.pl>, 2006
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2013-12-18 14:35+0000\n"
+"PO-Revision-Date: 2013-12-18 09:34-0500\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/initial-setup/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -30,12 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "Na pewno zakończyć proces konfiguracji?\nZakończenie go może pozostawić system w stanie nieużywalnym. Komputer zostanie ponownie uruchomiony, jeśli warunki licencji nie zostaną przyjęte."
+msgstr ""
+"Na pewno zakończyć proces konfiguracji?\n"
+"Zakończenie go może pozostawić system w stanie nieużywalnym. Komputer zostanie ponownie uruchomiony, jeśli warunki licencji nie zostaną przyjęte."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -54,7 +45,9 @@ msgstr "Przyjmuję warunki licencji"
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "Nie odnaleziono licencji. Prosimy to zgłosić pod adresem http://bugzilla.redhat.com"
+msgstr ""
+"Nie odnaleziono licencji. Prosimy to zgłosić pod adresem "
+"http://bugzilla.redhat.com"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

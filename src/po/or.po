@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Manoj Kumar Giri <mgiri@redhat.com>, 2014
+# Manoj Kumar Giri <mgiri@redhat.com>, 2013-2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-17 11:32+0000\n"
+"PO-Revision-Date: 2014-02-04 06:24-0500\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya (http://www.transifex.com/projects/p/initial-setup/language/or/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: or\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "ବିନ୍ୟାସ ପଦ୍ଧତିରୁ ବିଦାୟ ନେବାକୁ ଚାହୁଁଛନ୍ତି ବୋଲି ଆପଣ ନିଶ୍ଚିତ କି?\nଯଦି ଆପଣ ଚାହାନ୍ତି ତେବେ ଆପଣଙ୍କୁ ହୁଏତଃ ଏକ ବ୍ୟବହାର ଅଯୋଗ୍ୟ ତନ୍ତ୍ର ମିଳିପାରେ। ଅନ୍ୟଥା ଲାଇସେନ୍ସ ରାଜିନାମାକୁ ଗ୍ରହଣ ହୋଇଥାଏ, ଏହି ତନ୍ତ୍ରକୁ ପୁନଃଚାଳନଃ କରାଯିବ।"
+msgstr ""
+"ବିନ୍ୟାସ ପଦ୍ଧତିରୁ ବିଦାୟ ନେବାକୁ ଚାହୁଁଛନ୍ତି ବୋଲି ଆପଣ ନିଶ୍ଚିତ କି?\n"
+"ଯଦି ଆପଣ ଚାହାନ୍ତି ତେବେ ଆପଣଙ୍କୁ ହୁଏତଃ ଏକ ବ୍ୟବହାର ଅଯୋଗ୍ୟ ତନ୍ତ୍ର ମିଳିପାରେ। ଅନ୍ୟଥା ଲାଇସେନ୍ସ ରାଜିନାମାକୁ ଗ୍ରହଣ ହୋଇଥାଏ, ଏହି ତନ୍ତ୍ରକୁ ପୁନଃଚାଳନଃ କରାଯିବ।"
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +45,9 @@ msgstr "ମୁଁ ଲାଇସେନସ ରାଜିନାମା ସହିତ �
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "କୌଣସି ଲାଇସେନ୍ସ ମିଳିଲା ନାହିଁ। ଦୟାକରି ଏହାକୁ http://bugzilla.redhat.com ରେ ଖବର କରନ୍ତୁ"
+msgstr ""
+"କୌଣସି ଲାଇସେନ୍ସ ମିଳିଲା ନାହିଁ। ଦୟାକରି ଏହାକୁ http://bugzilla.redhat.com ରେ ଖବର "
+"କରନ୍ତୁ"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

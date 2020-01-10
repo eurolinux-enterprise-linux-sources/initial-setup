@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Nilamdyuti Goswami <ngoswami@redhat.com>, 2013-2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-03 14:21+0000\n"
+"PO-Revision-Date: 2014-01-03 09:18-0500\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
 "Language-Team: Assamese (http://www.transifex.com/projects/p/initial-setup/language/as/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: as\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "আপুনি সংৰূপ প্ৰক্ৰিয়া প্ৰস্থান কৰিবলৈ নিশ্চিত নে?\nইয়াৰ ফলস্বৰূপ আপোনাৰ চিস্টেম ব্যৱহাৰৰ অযোগ্য হৈ যাব পাৰে। অনুজ্ঞা চুক্তি\nগ্ৰহণ নকৰিলে, চিস্টেম পুনাৰম্ভ কৰা হব।"
+msgstr ""
+"আপুনি সংৰূপ প্ৰক্ৰিয়া প্ৰস্থান কৰিবলৈ নিশ্চিত নে?\n"
+"ইয়াৰ ফলস্বৰূপ আপোনাৰ চিস্টেম ব্যৱহাৰৰ অযোগ্য হৈ যাব পাৰে। অনুজ্ঞা চুক্তি\n"
+"গ্ৰহণ নকৰিলে, চিস্টেম পুনাৰম্ভ কৰা হব।"
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +46,9 @@ msgstr "মই অনুজ্ঞা চুক্তি গ্ৰহণ কৰ�
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "কোনো অনুজ্ঞা পোৱা নগল। অনুগ্ৰহ কৰি ইয়াক http://bugzilla.redhat.com ত সংবাদন কৰক"
+msgstr ""
+"কোনো অনুজ্ঞা পোৱা নগল। অনুগ্ৰহ কৰি ইয়াক http://bugzilla.redhat.com ত সংবাদন "
+"কৰক"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

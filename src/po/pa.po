@@ -3,26 +3,31 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Amandeep Singh Saini <asaini@redhat.com>, 2014
+# Amandeep Singh Saini <asaini@redhat.com>, 2013
+# A S Alam <apreet.alam@gmail.com>, 2013
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-21 08:14+0000\n"
-"Last-Translator: Amandeep Singh Saini <asaini@redhat.com>\n"
+"PO-Revision-Date: 2013-12-18 05:00-0500\n"
+"Last-Translator: vpodzime <vpodzime@redhat.com>\n"
 "Language-Team: Panjabi (Punjabi) (http://www.transifex.com/projects/p/initial-setup/language/pa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pa\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਸੰਰਚਨਾ ਕਾਰਵਾਈ ਨੂੰ ਛੱਡਣਾ ਚਾਹੁੰਦੇ ਹੋ?\nਜੇ ਤੁਸੀਂ ਕਰਦੇ ਹੋ ਤਾਂ ਨਤੀਜਾ ਇੱਕ ਗੈਰ-ਵਰਤੋਂਯੋਗ ਸਿਸਟਮ ਦੇ ਰੂਪ ਵਿੱਚ ਹੋ ਸਕਦਾ ਹੈ। ਲਾਇਸੰਸ ਇਕਰਾਰਨਾਮਾ ਸਵੀਕਾਰ ਹੋਣ ਤੱਕ, ਸਿਸਟਮ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਜਾਵੇਗਾ।"
+msgstr ""
+"ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਸੰਰਚਨਾ ਕਾਰਵਾਈ ਨੂੰ ਛੱਡਣਾ ਚਾਹੁੰਦੇ ਹੋ?\n"
+"ਜੇ ਤੁਸੀਂ ਕਰਦੇ ਹੋ ਤਾਂ ਨਤੀਜਾ ਇੱਕ ਗੈਰ-ਵਰਤੋਂਯੋਗ ਸਿਸਟਮ ਦੇ ਰੂਪ ਵਿੱਚ ਹੋ ਸਕਦਾ ਹੈ। ਲਾਇਸੰਸ ਇਕਰਾਰਨਾਮਾ ਸਵੀਕਾਰ ਹੋਣ ਤੱਕ, ਸਿਸਟਮ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਜਾਵੇਗਾ।"
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +46,8 @@ msgstr "ਮੈਂ ਲਾਈਸੈਂਸ ਇਕਰਾਰਨਾਮਾ ਸਵੀਕ
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "ਕੋਈ ਲਾਈਸੈਂਸ ਨਹੀਂ ਲੱਭਿਆ। ਕਿਰਪਾ ਕਰ ਕੇ http://bugzilla.redhat.com ਤੇ ਸੂਚਿਤ ਕਰੋ"
+msgstr ""
+"ਕੋਈ ਲਾਈਸੈਂਸ ਨਹੀਂ ਲੱਭਿਆ। ਕਿਰਪਾ ਕਰ ਕੇ http://bugzilla.redhat.com ਤੇ ਸੂਚਿਤ ਕਰੋ"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

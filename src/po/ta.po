@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# shkumar <shkumar@redhat.com>, 2014
+# shkumar <shkumar@redhat.com>, 2013-2014
+# shkumar <shkumar@redhat.com>, 2013
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-07 07:19+0000\n"
+"PO-Revision-Date: 2014-01-07 02:15-0500\n"
 "Last-Translator: shkumar <shkumar@redhat.com>\n"
 "Language-Team: Tamil (http://www.transifex.com/projects/p/initial-setup/language/ta/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "அமைவாக்க செயலிலிருந்து நிச்சயம் வெளியேற வேண்டுமா?\nஅப்படிச் செய்தால் கணினி பயன்படுத்த முடியாததாகக்கூடும். உரிம ஒப்பந்தம் ஏற்றுக்கொள்ளப்படாவிட்டால் கணினி மறுதுவக்கமாகும்."
+msgstr ""
+"அமைவாக்க செயலிலிருந்து நிச்சயம் வெளியேற வேண்டுமா?\n"
+"அப்படிச் செய்தால் கணினி பயன்படுத்த முடியாததாகக்கூடும். உரிம ஒப்பந்தம் ஏற்றுக்கொள்ளப்படாவிட்டால் கணினி மறுதுவக்கமாகும்."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +46,9 @@ msgstr "உரிம ஒப்பந்தத்தை ஏற்கிறேன�
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "உரிமம் காணப்படவில்லை. இதைக் குறித்து http://bugzilla.redhat.com இல் அறிக்கையிடவும்"
+msgstr ""
+"உரிமம் காணப்படவில்லை. இதைக் குறித்து http://bugzilla.redhat.com இல் "
+"அறிக்கையிடவும்"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

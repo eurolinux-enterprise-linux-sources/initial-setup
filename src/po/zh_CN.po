@@ -5,25 +5,29 @@
 # Translators:
 # Tommy He <lovenemesis@gmail.com>, 2013
 # Wei Liu <LLIU@REDHAT.COM>, 2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-14 04:58+0000\n"
+"PO-Revision-Date: 2014-01-14 12:00-0500\n"
 "Last-Translator: Wei Liu <LLIU@REDHAT.COM>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/initial-setup/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
+"Language: zh-CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "您确定您想要退出配置过程？\n若是这样做的话您可能会得到一个无法使用的系统。除非同意许可授权，系统将重启。"
+msgstr ""
+"您确定您想要退出配置过程？\n"
+"若是这样做的话您可能会得到一个无法使用的系统。除非同意许可授权，系统将重启。"
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"

@@ -3,26 +3,30 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Rainer Gromansperg <rgromans@redhat.com>, 2014
+# Roman Spirgi <bigant@fedoraproject.org>, 2013-2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-14 05:40+0000\n"
-"Last-Translator: Rainer Gromansperg <rgromans@redhat.com>\n"
+"PO-Revision-Date: 2014-09-21 06:49-0400\n"
+"Last-Translator: Roman Spirgi <bigant@fedoraproject.org>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/initial-setup/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "Sind Sie sicher, dass Sie den Konfigurationsvorgang beenden möchten?\nIhr System könnte dadurch unbenutzbar werden.  Wenn die Lizenzvereinbarung nicht akzeptiert wird, wird das System neu gestartet."
+msgstr ""
+"Sind Sie sicher, dass Sie den Konfigurationsvorgang beenden möchten?\n"
+"Ihr System könnte dadurch unbenutzbar werden.  Wenn die Lizenzvereinbarung nicht akzeptiert wird, wird das System neu gestartet."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +45,8 @@ msgstr "Ich akzeptiere die Lizenz Vereinbarung."
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "Keine Lizenz gefunden. Bitte melden SIe dies auf http://bugzilla.redhat.com"
+msgstr ""
+"Keine Lizenz gefunden. Bitte melden SIe dies auf http://bugzilla.redhat.com"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81

@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+#, 2013
 # Ankit Patel <ankit644@yahoo.com>, 2014
+# Martin Kolman <mkolman@redhat.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: initial-setup\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-11 16:53+0100\n"
-"PO-Revision-Date: 2014-01-15 09:01+0000\n"
+"PO-Revision-Date: 2014-01-15 04:02-0500\n"
 "Last-Translator: Ankit Patel <ankit644@yahoo.com>\n"
 "Language-Team: Gujarati (http://www.transifex.com/projects/p/initial-setup/language/gu/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: gu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.7.1\n"
 
 #: ../initial_setup/tui/tui.py:16 ../initial_setup/gui/gui.py:18
 msgid ""
 "Are you sure you want to quit the configuration process?\n"
 "You might end up with an unusable system if you do. Unless the License agreement is accepted, the system will be rebooted."
-msgstr "શું તમે ખરેખર રૂપરેખાંકન પ્રક્રિયામાંથી બહાર નીકળવા માંગો છો?\nતમારો બિનઉપયોગી સિસ્ટમ સાથે અંત આવી શકે છે જો તમે કરો તો. નહિં તો લાઇસન્સ કરારને સ્વીકારેલ છે, સિસ્ટમ રિબુટ થશે."
+msgstr ""
+"શું તમે ખરેખર રૂપરેખાંકન પ્રક્રિયામાંથી બહાર નીકળવા માંગો છો?\n"
+"તમારો બિનઉપયોગી સિસ્ટમ સાથે અંત આવી શકે છે જો તમે કરો તો. નહિં તો લાઇસન્સ કરારને સ્વીકારેલ છે, સિસ્ટમ રિબુટ થશે."
 
 #: ../initial_setup/tui/spokes/eula.py:20
 msgid "License information"
@@ -41,7 +46,9 @@ msgstr "હું લાઇસન્સ કરારને સ્વીકાર
 #: ../initial_setup/tui/spokes/eula.py:43
 #: ../initial_setup/gui/spokes/eula.py:41
 msgid "No license found. Please report this at http://bugzilla.redhat.com"
-msgstr "લાઇસન્સ મળ્યુ નથી. મહેરબાની કરીને http://bugzilla.redhat.com પર આનો અહેવાલ કરો"
+msgstr ""
+"લાઇસન્સ મળ્યુ નથી. મહેરબાની કરીને http://bugzilla.redhat.com પર આનો અહેવાલ "
+"કરો"
 
 #: ../initial_setup/tui/spokes/eula.py:59
 #: ../initial_setup/gui/spokes/eula.py:81
